@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataForge — Визуальный редактор баз данных и игрового контента</title>
+  <meta name="description" content="DataForge — современный визуальный редактор игровых данных для разработчиков. Создание категорий, кастомные шаблоны отображения, экспорт в JSON/CSV и встроенная поддержка плагинов.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Grid Background Effect -->
+  <div class="grid-bg"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#overview" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <span>DataForge</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav">
+        <a href="#overview" class="nav-link active" data-tab="overview">Обзор</a>
+        <a href="#docs" class="nav-link" data-tab="docs">Документация</a>
+        <a href="#releases" class="nav-link" data-tab="releases">Релизы</a>
+        <a href="#themes-extensions" class="nav-link" data-tab="themes-extensions">Расширения</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Переключить тему">
+          <!-- Sun Icon (visible in dark) -->
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (visible in light) -->
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <a href="https://github.com" target="_blank" class="github-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+
+      <!-- Mobile menu trigger -->
+      <button class="mobile-menu-btn" aria-label="Открыть меню">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12" class="line-1"></line>
+          <line x1="3" y1="6" x2="21" y2="6" class="line-2"></line>
+          <line x1="3" y1="18" x2="21" y2="18" class="line-3"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu">
+    <a href="#overview" class="mobile-link" data-tab="overview">Обзор</a>
+    <a href="#docs" class="mobile-link" data-tab="docs">Документация</a>
+    <a href="#releases" class="mobile-link" data-tab="releases">Релизы</a>
+    <a href="#themes-extensions" class="mobile-link" data-tab="themes-extensions">Расширения</a>
+    <div class="mobile-actions">
+      <a href="https://github.com" target="_blank" class="github-btn" style="width: 100%; justify-content: center;">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    
+    <!-- SECTION: OVERVIEW -->
+    <section id="overview-tab" class="tab-pane active">
+      <div class="hero-section">
+        <div class="container hero-container">
+          <div class="hero-text">
+            <div class="badge-new">Новая версия v0.0.1 (Alpha) доступна!</div>
+            <h1>Проектируйте игровые данные с удовольствием</h1>
+            <p class="hero-lead">DataForge — это мощный визуальный редактор игровых баз данных, который помогает геймдизайнерам и разработчикам выстраивать структуру контента, гибко настраивать визуальные шаблоны ввода и экспортировать готовые файлы для движков.</p>
+            <div class="hero-actions">
+              <a href="#docs" class="btn btn-primary">
+                <span>Начать работу</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#releases" class="btn btn-secondary">Скачать приложение</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="visual-card">
+              <div class="card-header-mock">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="title-mock">DataForge Editor — /projects/rpg_db</span>
+              </div>
+              <div class="card-body-mock">
+                <div class="sidebar-mock">
+                  <div class="mock-item active">⚔️ Items</div>
+                  <div class="mock-item">👾 Enemies</div>
+                  <div class="mock-item">📜 Quests</div>
+                  <div class="mock-item">⚙️ Settings</div>
+                </div>
+                <div class="content-mock">
+                  <div class="mock-header">
+                    <h4>Sword of Souls</h4>
+                    <span class="mock-tag">weapon</span>
+                  </div>
+                  <div class="mock-fields">
+                    <div class="mock-field-row"><span class="lbl">ID:</span><span class="val mono">sword_of_souls</span></div>
+                    <div class="mock-field-row"><span class="lbl">Name:</span><span class="val">Меч Душ</span></div>
+                    <div class="mock-field-row"><span class="lbl">Damage:</span><span class="val number">145</span></div>
+                    <div class="mock-field-row"><span class="lbl">Magic Element:</span><span class="val dropdown">Shadow</span></div>
+                    <div class="mock-field-row">
+                      <span class="lbl">Rarity Color:</span>
+                      <span class="val color-preview" style="background-color: #8a2be2;"></span>
+                      <span class="val mono">#8A2BE2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="features-section container">
+        <h2 class="section-title">Почему DataForge?</h2>
+        <p class="section-subtitle">Создан специально для избавления от бесконечной путаницы в Excel таблицах и JSON файлах при создании игр.</p>
+        
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="9"></rect>
+                <rect x="14" y="3" width="7" height="5"></rect>
+                <rect x="14" y="12" width="7" height="9"></rect>
+                <rect x="3" y="16" width="7" height="5"></rect>
+              </svg>
+            </div>
+            <h3>Гибкая структура категорий</h3>
+            <p>Создавайте таблицы сущностей любой сложности: оружие, враги, диалоги, квесты. Настраивайте связи между таблицами в один клик.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                <path d="M12 16V12"></path>
+                <path d="M12 8h.01"></path>
+              </svg>
+            </div>
+            <h3>Кастомный Layout</h3>
+            <p>Выстраивайте удобные формы редактирования: объединяйте поля в горизонтальные и вертикальные контейнеры, добавляйте разделители и секции.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h3>Множество типов данных</h3>
+            <p>Строки, числа, логические флаги, цветовые палитры, ссылки на файлы/изображения, выпадающие списки и спрайт-листы/атласы.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 16 12 12 8 16"></polyline>
+                <line x1="12" y1="12" x2="12" y2="21"></line>
+                <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+                <polyline points="16 16 12 12 8 16"></polyline>
+              </svg>
+            </div>
+            <h3>Мгновенный экспорт</h3>
+            <p>Экспортируйте ваши заполненные структуры в чистый, валидный JSON или структурированный CSV для быстрой загрузки в игровой движок.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3>Система плагинов</h3>
+            <p>Расширяйте редактор с помощью JS-плагинов: регистрируйте новые типы полей, добавляйте собственные валидаторы и элементы управления.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3>Быстрый и Лёгкий</h3>
+            <p>Создан на Tauri + React + TS. Работает быстро, потребляет минимум оперативной памяти и запускается локально без интернета.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: DOCUMENTATION -->
+    <section id="docs-tab" class="tab-pane">
+      <div class="docs-container container">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="docs-sidebar">
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="docs-search" placeholder="Поиск в документации...">
+          </div>
+          
+          <ul class="docs-menu">
+            <li class="docs-menu-item">
+              <a href="#intro" class="docs-link active">Введение</a>
+            </li>
+            <li class="docs-menu-item">
+              <a href="#installation" class="docs-link">Установка и Требования</a>
+            </li>
+            <li class="docs-menu-item">
+              <a href="#categories" class="docs-link">Категории и Структура</a>
+            </li>
+            <li class="docs-menu-item">
+              <a href="#fields" class="docs-link">Поля и Типы Данных</a>
+            </li>
+            <li class="docs-menu-item">
+              <a href="#layouts" class="docs-link">Настройка Внешнего Вида (Layouts)</a>
+            </li>
+            <li class="docs-menu-item">
+              <a href="#export" class="docs-link">Импорт и Экспорт</a>
+            </li>
+            <li class="docs-menu-item">
+              <a href="#plugins-dev" class="docs-link">Разработка плагинов (API)</a>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Main Docs Content -->
+        <article class="docs-content">
+          
+          <!-- DOC SECTION: Intro -->
+          <div id="doc-intro" class="doc-section active">
+            <h2>Введение в DataForge</h2>
+            <p><strong>DataForge</strong> — это кроссплатформенное приложение с графическим интерфейсом, предназначенное для организации баз данных игровых проектов. Оно решает проблему хаоса в статических ресурсах игры (таких как характеристики оружия, параметры монстров, балансировочные коэффициенты квестов и сценарии диалогов).</p>
+            <p>В отличие от тяжелых СУБД (SQL) или обычных текстовых редакторов, DataForge предлагает интуитивный интерфейс, где структура данных (схема) и сам контент разделены, но редактируются в одном месте.</p>
+            
+            <div class="note-box">
+              <strong>💡 Универсальность для любых движков:</strong> DataForge спроектирован так, чтобы не зависеть от конкретной платформы. Независимо от того, используете ли вы Unity, Unreal Engine, Godot, Defold или LÖVE2D, вы можете экспортировать свои структуры данных в форматы, поддерживаемые любым современным движком.
+            </div>
+
+            <h3>Ключевые Концепции</h3>
+            <ul>
+              <li><strong>Категории (Categories)</strong> — это описание структуры таблицы. Например, категория "Оружие".</li>
+              <li><strong>Поля (Fields)</strong> — столбцы с определенным типом данных в категории. Например, `damage` (число) или `icon` (путь к картинке).</li>
+              <li><strong>Макет (Layout)</strong> — схема того, как поля будут скомпонованы на экране при редактировании. Позволяет структурировать форму ввода и визуально группировать поля по смыслу.</li>
+              <li><strong>Элементы (Items)</strong> — конкретные строки данных. Например, `Sword of Souls` со всеми его характеристиками.</li>
+            </ul>
+          </div>
+
+          <!-- DOC SECTION: Installation -->
+          <div id="doc-installation" class="doc-section">
+            <h2>Установка и Требования</h2>
+            <p>Приложение DataForge поставляется в виде готовых бинарных файлов для операционных систем <strong>macOS</strong> и <strong>Windows</strong>. Вам не требуется скачивать исходный код или настраивать среду разработки для запуска.</p>
+            
+            <h3>Установка на macOS</h3>
+            <ol>
+              <li>Перейдите во вкладку <a href="#releases">Релизы</a> и скачайте сборку для macOS (файл <code>.dmg</code>).</li>
+              <li>Откройте скачанный DMG-образ и перетащите иконку <strong>DataForge</strong> в папку <strong>Applications</strong> (Программы).</li>
+              <li>
+                <div class="note-box">
+                  <strong>⚠️ Примечание безопасности:</strong> Так как приложение распространяется напрямую без публикации в Mac App Store, при первом запуске macOS может заблокировать его. Чтобы обойти это, кликните по иконке приложения правой кнопкой мыши (или зажав Control), выберите <strong>Открыть</strong>, а затем подтвердите запуск в появившемся окне.
+                </div>
+              </li>
+            </ol>
+
+            <h3>Установка на Windows</h3>
+            <ol>
+              <li>Перейдите во вкладку <a href="#releases">Релизы</a> и скачайте исполняемый файл для Windows (портативная версия <code>.exe</code>).</li>
+              <li>Перенесите файл в любую удобную для вас папку. Никакой дополнительной установки не требуется — приложение готово к работе.</li>
+              <li>
+                <div class="note-box">
+                  <strong>⚠️ Примечание безопасности:</strong> Поскольку приложение распространяется напрямую, фильтр Windows SmartScreen может выдать предупреждение об "Неизвестном издателе". В этом случае нажмите ссылку <strong>Подробнее</strong> (More info), а затем кнопку <strong>Выполнить в любом случае</strong> (Run anyway).
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- DOC SECTION: Categories -->
+          <div id="doc-categories" class="doc-section">
+            <h2>Категории и Наследование</h2>
+            <p>Создание любой базы данных в DataForge начинается с <strong>Категорий (Categories)</strong>. Каждая категория представляет собой описание структуры таблицы однородных объектов (например, «Оружие», «Квесты» или «Характеристики персонажей»).</p>
+
+            <h3>Создание Категории</h3>
+            <p>В левой панели приложения найдите кнопку <strong><code>+</code></strong> рядом с заголовком категорий. В модальном окне укажите следующие параметры:</p>
+            <ul>
+              <li><strong>ID:</strong> Уникальный системный идентификатор (например, <code>weapons</code>). Используется в качестве ключа при экспорте. Допускаются только латинские буквы, цифры и знаки подчеркивания.</li>
+              <li><strong>Name:</strong> Отображаемое имя категории в интерфейсе редактора (например, "Холодное оружие").</li>
+              <li><strong>Родительская категория (Parent Category):</strong> Позволяет указать существующую категорию в качестве родителя, выстраивая иерархическое дерево данных.</li>
+            </ul>
+
+            <h3>Наследование Полей и Макетов</h3>
+            <p>В DataForge реализована мощная система наследования структуры данных, избавляющая от повторного ручного описания схем:</p>
+            <ul>
+              <li><strong>Наследование структуры (Fields Inheritance):</strong> При включенном переключателе <code>inheritFields</code> в настройках категории, дочерняя таблица автоматически получает все поля своей родительской категории (и её предков выше по иерархии).</li>
+              <li><strong>Переопределение свойств полей (Overrides):</strong> Дочерняя категория может переопределить настройки унаследованного поля (например, изменить тип, регулярное выражение или границы чисел), просто создав поле с тем же ID.</li>
+              <li><strong>Наследование макетов (Layout Fallback):</strong> Если в дочерней категории не настроена вкладка визуального макета <strong>Layout</strong>, редактор автоматически использует макет родительской категории для отрисовки карточек элементов.</li>
+            </ul>
+          </div>
+
+          <!-- DOC SECTION: Fields -->
+          <div id="doc-fields" class="doc-section">
+            <h2>Поля, Валидация и Наследование Значений</h2>
+            <p>Поля (Fields) определяют схему данных объектов внутри выбранной категории. Каждое поле имеет уникальный ID, отображаемое имя и тип данных.</p>
+            
+            <h3>Доступные типы данных (10 типов полей):</h3>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Тип</th>
+                    <th>Описание</th>
+                    <th>Пример использования</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>String</code></td>
+                    <td>Текстовая строка</td>
+                    <td>Имя персонажа, описание предмета</td>
+                  </tr>
+                  <tr>
+                    <td><code>Number</code></td>
+                    <td>Число (целое или с плавающей точкой)</td>
+                    <td>Запас здоровья, множитель урона</td>
+                  </tr>
+                  <tr>
+                    <td><code>Boolean</code></td>
+                    <td>Логический переключатель (Да/Нет)</td>
+                    <td>Является ли предмет квестовым</td>
+                  </tr>
+                  <tr>
+                    <td><code>Color</code></td>
+                    <td>Цвет в HEX / RGBA формате с палитрой</td>
+                    <td>Цвет свечения эффекта, цвет редкости</td>
+                  </tr>
+                  <tr>
+                    <td><code>Reference</code></td>
+                    <td>Ссылка на элемент из другой категории</td>
+                    <td>Ссылка на стартовое оружие у класса персонажа</td>
+                  </tr>
+                  <tr>
+                    <td><code>Dropdown</code></td>
+                    <td>Выбор одного значения из списка опций</td>
+                    <td>Тип урона: Fire, Cold, Poison, Physical</td>
+                  </tr>
+                  <tr>
+                    <td><code>Filepath</code></td>
+                    <td>Абсолютный или относительный путь к файлу</td>
+                    <td>Путь к файлу скрипта поведения или звука</td>
+                  </tr>
+                  <tr>
+                    <td><code>Image</code></td>
+                    <td>Путь к изображению с предпросмотром в UI</td>
+                    <td>Иконка предмета, портрет персонажа</td>
+                  </tr>
+                  <tr>
+                    <td><code>Collection</code></td>
+                    <td>Список (массив) значений одного типа</td>
+                    <td>Список предметов в сундуке, требования квеста</td>
+                  </tr>
+                  <tr>
+                    <td><code>Custom</code></td>
+                    <td>Пользовательский тип, управляемый плагинами</td>
+                    <td>Слайдер диапазона, выбор даты, таблица формул</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="tip-box">
+              <strong>💡 Умные связи:</strong> При создании поля типа <code>Reference</code> вы можете выбрать целевую категорию. В интерфейсе редактирования элементов DataForge автоматически покажет выпадающий список со всеми элементами этой целевой категории.
+            </div>
+
+            <h3>Настройки валидации и ограничений (Field Config)</h3>
+            <p>При добавлении или редактировании поля в схеме категории вы можете настроить параметры его валидации:</p>
+            <ul>
+              <li><strong>Обязательное (Required):</strong> Поле не может оставаться пустым при сохранении элемента.</li>
+              <li><strong>Уникальное (Unique):</strong> Редактор проверяет уникальность значения этого поля во всех элементах категории, предотвращая дубликаты.</li>
+              <li><strong>Регулярное выражение (Regex):</strong> Проверка текстовых строк на соответствие паттерну (например, маска артикула <code>^[A-Z]{3}-\d{4}$</code>).</li>
+              <li><strong>Локализация (Localized):</strong> Указывает, что поле предназначено для хранения языковых ключей (поддерживающих переводы).</li>
+              <li><strong>Многострочность (Multiline):</strong> Отображает многострочное поле ввода (textarea) вместо одной текстовой строки.</li>
+              <li><strong>Отражать имя (Reflects Name):</strong> Значение этого строкового поля будет автоматически подставляться в качестве заголовка элемента в дереве сущностей (вместо технического ID элемента).</li>
+              <li><strong>Границы диапазона (Min, Max, Step):</strong> Для числового типа <code>Number</code> — задаёт границы ввода и шаг (например, шаг <code>0.1</code> для плавных значений или <code>1</code> для целых чисел).</li>
+            </ul>
+
+            <h3>Наследование значений и переопределение (Система Замков)</h3>
+            <p>DataForge реализует гибкую систему наследования значений с помощью <strong>замков (Locks)</strong>:</p>
+            <ul>
+              <li><strong>Default Values:</strong> На уровне категории (вкладка <em>Default Values</em>) вы можете определить значения по умолчанию для всех полей.</li>
+              <li><strong>Открытый замок (Unlocked):</strong> По умолчанию все поля нового элемента наследуют дефолтные значения из категории. Если изменить значение по умолчанию в настройках категории, оно мгновенно обновится во всех элементах с открытым замком.</li>
+              <li><strong>Закрытый замок (Locked / Override):</strong> Если изменить поле в конкретном элементе вручную, замок автоматически закрывается. Это означает, что локальное значение переопределено и изолировано от изменений дефолтных значений на уровне категории. Вы можете сбросить переопределение в любой момент, нажав на замок.</li>
+            </ul>
+
+            <h3>Связи между Категориями (Relations / References)</h3>
+            <p>Связи (отношения) позволяют объединять разрозненные категории в единую структурированную базу данных. Они реализуются через специальный тип поля <code>Reference</code>.</p>
+            <ul>
+              <li><strong>Настройка связи:</strong> При создании поля типа <code>Reference</code> в настройках схемы категории вы указываете целевую категорию (например, в свойствах персонажа поле <code>weapon_id</code> будет ссылаться на категорию <code>weapons</code>).</li>
+              <li><strong>Интерфейс заполнения:</strong> При редактировании элемента DataForge автоматически подгружает все элементы из целевой категории и отображает удобный выпадающий список. Вместо ручного ввода ID разработчик выбирает нужный элемент по его имени.</li>
+              <li><strong>Типы связей:</strong>
+                <ul>
+                  <li><em>Одиночная связь (One-to-One / One-to-Many):</em> Обычное поле <code>Reference</code>, содержащее ссылку на один элемент. Например, класс персонажа указывает на свое стартовое снаряжение.</li>
+                  <li><em>Множественная связь (Many-to-Many):</em> Комбинация типов <code>Collection</code> и <code>Reference</code>. Позволяет хранить массив ссылок. Например, торговец ссылается на список товаров, которые он продает, или монстр содержит список активных умений (references на категорию умений).</li>
+                </ul>
+              </li>
+              <li><strong>Целостность данных:</strong> При экспорте сохраняются только строковые идентификаторы (ID) связанных элементов, что делает итоговый JSON/CSV чистым, легким и готовым для ручной или автоматической сборки связей на стороне игрового движка.</li>
+            </ul>
+          </div>
+
+          <!-- DOC SECTION: Layouts -->
+          <div id="doc-layouts" class="doc-section">
+            <h2>Настройка Внешнего Вида (Layouts)</h2>
+            <p>Когда у категории много полей (например, 20-30 характеристик для сложного монстра), редактировать их обычным списком становится неудобно. DataForge предоставляет визуальный инструмент настройки формы — <strong>Layout Tree Editor</strong>.</p>
+            <p>Вкладка <strong>Layout</strong> позволяет визуально сконструировать форму заполнения данных с помощью древовидной структуры узлов:</p>
+
+            <h3>Доступные элементы разметки:</h3>
+            <ul>
+              <li><strong>Контейнеры (Containers):</strong> Группируют несколько полей. Вы можете выбрать направление группировки: <em>Horizontal</em> (поля выстроятся в ряд) или <em>Vertical</em> (друг под другом).</li>
+              <li><strong>Заголовки (Headers):</strong> Добавляют текстовые разделители для визуального разделения блоков формы (например: "Базовые параметры", "Боевые характеристики").</li>
+              <li><strong>Разделители (Separators):</strong> Простые линии-разделители для отделения одной группы параметров от другой.</li>
+            </ul>
+
+            <h3>Управление и опции отображения полей:</h3>
+            <p>Вы можете перетаскивать созданные поля в контейнеры, настраивать их последовательность, а также задавать уникальные свойства для отображения полей в макете:</p>
+            <ul>
+              <li><strong>Растянуть (Expand):</strong> Флаг заставляет поле занимать всё доступное горизонтальное пространство в ряду (полезно для адаптивного распределения ширины полей в горизонтальных контейнерах).</li>
+              <li><strong>Встроить связь (Embed Reference):</strong> Доступно только для полей типа <code>Reference</code>. При активации этого флага вместо выпадающего списка выбора ID, прямо внутрь карточки текущего элемента будут **встроены поля редактирования связанного объекта**. Это позволяет редактировать связанные сущности «in-place» без перехода в другие категории.</li>
+            </ul>
+          </div>
+
+          <!-- DOC SECTION: Export -->
+          <div id="doc-export" class="doc-section">
+            <h2>Импорт и Экспорт Данных</h2>
+            <p>DataForge поддерживает двусторонний обмен данными, позволяя легко переносить информацию между редактором, внешними таблицами и файлами конфигурации вашей игры.</p>
+
+            <h3>Экспорт Данных</h3>
+            <p>Экспорт вызывается через кнопку <strong>Export</strong> в верхнем меню приложения. Доступны следующие форматы:</p>
+            <ol>
+              <li>
+                <strong>Lua Tables (.lua):</strong>
+                <p>При использовании плагина автоэкспорта Lua приложение генерирует готовые файлы <code>.lua</code> в виде стандартных ассоциативных массивов (таблиц), возвращаемых через <code>return</code>. Это наиболее производительный способ загрузки данных в Lua-совместимых движках, поскольку файлы компилируются и загружаются нативно, полностью исключая стадию ручного парсинга строк JSON во время выполнения игры.</p>
+              </li>
+              <li>
+                <strong>JSON (.json):</strong>
+                <p>Экспортирует всю базу данных в один компактный JSON-объект, либо генерирует отдельные JSON-файлы для каждой категории. Идеально подходит для универсального импорта в Unity, Unreal Engine или Godot.</p>
+              </li>
+              <li>
+                <strong>CSV (.csv):</strong>
+                <p>Экспортирует выбранную категорию в формате плоской таблицы. Удобно для импорта в Google Sheets, Excel или для движков, оптимизированных под табличные структуры.</p>
+              </li>
+            </ol>
+
+            <h3>Импорт Данных</h3>
+            <p>Импорт в DataForge позволяет быстро загружать существующие таблицы баланса или структурированные списки. Процесс импорта полностью автоматизирован: вместо загрузки данных в пустую категорию, редактор **автоматически создает новую категорию** на основе структуры импортируемого файла.</p>
+
+            <h4>Как устроен процесс импорта:</h4>
+            <ul>
+              <li><strong>Поддерживаемые форматы:</strong> Вы можете импортировать файлы трех типов:
+                <ul>
+                  <li><em>JSON (.json)</em> — массивы объектов или ассоциативные словари.</li>
+                  <li><em>CSV (.csv)</em> — плоские таблицы с заголовками.</li>
+                  <li><em>Lua (.lua)</em> — файлы, возвращающие Lua-таблицы (возвращаемое значение парсится через AST-анализатор).</li>
+                </ul>
+              </li>
+              <li><strong>Автоматическое создание категории:</strong> Имя новой категории и её уникальный ID формируются на основе имени импортируемого файла (например, файл <code>items_db.csv</code> создаст категорию <code>items_db</code>). Если категория с таким именем уже существует в проекте, редактор автоматически добавит числовой суффикс (например, <code>items_db_1</code>).</li>
+              <li><strong>Автогенерация схемы полей (Fields Schema):</strong> Вам не требуется настраивать структуру полей заранее. DataForge сканирует свойства импортируемых элементов и автоматически создает подходящие поля, определяя типы данных на лету:
+                <ul>
+                  <li>Числа распознаются как тип <code>Number</code>.</li>
+                  <li>Флаги true/false — как тип <code>Boolean</code>.</li>
+                  <li>Массивы — как тип <code>Collection</code>.</li>
+                  <li>Остальные значения — как стандартные поля <code>String</code>.</li>
+                </ul>
+              </li>
+              <li><strong>Окно настроек импорта (Import Settings):</strong> Перед финальной загрузкой открывается модальное окно настроек:
+                <ul>
+                  <li><em>Разделитель (для CSV):</em> Возможность указать символ разделения колонок (запятая, точка с запятой и т.д.).</li>
+                  <li><em>Выбор ключевого поля ID:</em> Вы можете указать, какое поле из файла использовать в качестве уникального `id` элемента (например, колонку с именем, артикулом или ключи словаря). Если выбрать вариант <code>none</code>, то ID будут сгенерированы автоматически.</li>
+                  <li><em>Префикс автогенерации ID:</em> Вы можете задать префикс для автогенерируемых ID (по умолчанию используется имя файла с подчеркиванием).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <!-- DOC SECTION: Plugins Developer Guide -->
+          <div id="doc-plugins-dev" class="doc-section">
+            <h2>Разработка Плагинов (API)</h2>
+            <p>DataForge поддерживает динамическую загрузку плагинов, написанных на JavaScript. Вы можете расширять функционал редактора, регистрируя новые типы полей, добавляя собственные настройки и взаимодействуя со встроенным Tauri API.</p>
+            <p>Каждый плагин представляет собой один <code>.js</code> файл, который помещается в локальную папку плагинов приложения. Настройки и метаданные плагина парсятся из JSDoc-комментария в начале файла.</p>
+
+            <h3>Метаданные плагина</h3>
+            <p>Каждый плагин представляет собой один <code>.js</code> файл. В начале файла должен присутствовать JSDoc-комментарий, содержащий следующие параметры: имя плагина (<code>@name</code>), краткое описание (<code>@description</code>), версию (<code>@version</code>), автора (<code>@author</code>) и перечень регистрируемых типов полей (<code>@fields</code>).</p>
+
+            <h3>Интерфейс API</h3>
+            <p>При загрузке плагину передаются два глобальных объекта: <code>DataForge</code> (интерфейс API редактора) и <code>React</code>. Доступны следующие методы:</p>
+
+            <h4>1. Регистрация нового типа поля</h4>
+            <pre><code>DataForge.registerFieldType(pluginId, fieldTypeConfig);</code></pre>
+            <p>Параметры объекта <code>fieldTypeConfig</code>:</p>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Параметр</th>
+                    <th>Тип</th>
+                    <th>Описание</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>id</code></td>
+                    <td><code>String</code></td>
+                    <td>Уникальный ID типа поля (например, <code>"range_slider"</code>).</td>
+                  </tr>
+                  <tr>
+                    <td><code>name</code></td>
+                    <td><code>String</code></td>
+                    <td>Отображаемое имя типа поля в конструкторе макетов.</td>
+                  </tr>
+                  <tr>
+                    <td><code>icon</code></td>
+                    <td><code>String</code></td>
+                    <td>Название иконки из библиотеки Lucide (например, "Sliders", "Calendar").</td>
+                  </tr>
+                  <tr>
+                    <td><code>renderConfig</code></td>
+                    <td><code>Function</code></td>
+                    <td>Компонент React для рендеринга настроек поля в окне редактирования структуры категории. Принимает аргументы <code>{ config, onChange }</code>.</td>
+                  </tr>
+                  <tr>
+                    <td><code>renderCell</code></td>
+                    <td><code>Function</code></td>
+                    <td>Компонент React для рендеринга инпута в форме заполнения элемента. Принимает аргументы <code>{ value, onChange, field, rowId, projectSettings }</code>.</td>
+                  </tr>
+                  <tr>
+                    <td><code>renderPreview</code></td>
+                    <td><code>Function</code></td>
+                    <td>Компонент React для рендеринга предпросмотра значения поля в списках. Принимает аргументы <code>{ value, field, projectSettings }</code>.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4>2. Регистрация настроек плагина</h4>
+            <pre><code>DataForge.registerSetting(pluginId, settingConfig);</code></pre>
+            <p>Позволяет добавить параметры настройки плагина в глобальное меню настроек приложения. Параметры <code>settingConfig</code>:</p>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Параметр</th>
+                    <th>Тип</th>
+                    <th>Описание</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>id</code></td>
+                    <td><code>String</code></td>
+                    <td>Уникальный ID настройки.</td>
+                  </tr>
+                  <tr>
+                    <td><code>name</code></td>
+                    <td><code>String</code></td>
+                    <td>Название настройки в интерфейсе.</td>
+                  </tr>
+                  <tr>
+                    <td><code>description</code></td>
+                    <td><code>String</code></td>
+                    <td>Подсказка или подробное описание настройки.</td>
+                  </tr>
+                  <tr>
+                    <td><code>type</code></td>
+                    <td><code>String</code></td>
+                    <td>Тип инпута: <code>"string"</code>, <code>"boolean"</code>, <code>"number"</code>, <code>"directory"</code>.</td>
+                  </tr>
+                  <tr>
+                    <td><code>default</code></td>
+                    <td><code>any</code></td>
+                    <td>Значение по умолчанию.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4>3. Интеграция с ОС через Tauri Bridge</h4>
+            <p>Объект <code>DataForge.Tauri</code> предоставляет методы для безопасной работы с файловой системой пользователя:</p>
+            <ul>
+              <li><code>Tauri.open(options)</code> — вызов диалогового окна выбора файла/директории.</li>
+              <li><code>Tauri.readTextFile(path)</code> — чтение содержимого текстового файла с диска.</li>
+              <li><code>Tauri.convertFileSrc(path)</code> — конвертация абсолютного пути к локальному файлу в безопасную ссылку (URL) для отображения в браузере (например, для предпросмотра картинок).</li>
+            </ul>
+          </div>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION: RELEASES -->
+    <section id="releases-tab" class="tab-pane">
+      <div class="releases-container container">
+        <h2 class="section-title">История Релизов</h2>
+        <p class="section-subtitle">Следите за обновлениями DataForge. Загружайте готовые сборки для вашей платформы.</p>
+
+        <div class="releases-list">
+          
+          <!-- Release v0.0.1 -->
+          <div class="release-card">
+            <div class="release-header">
+              <div>
+                <span class="release-ver">v0.0.1 (Alpha-1)</span>
+                <span class="release-date">Июль 2026</span>
+              </div>
+              <span class="release-badge latest">Latest Release</span>
+            </div>
+            
+            <div class="release-body">
+              <h3>Что нового:</h3>
+              <ul>
+                <li><span class="badge badge-feat">Feature</span> Полностью переработана визуальная система настройки шаблонов ввода (Layout Constructor).</li>
+                <li><span class="badge badge-feat">Feature</span> Внедрена архитектура плагинов (JS-расширения для кастомных типов полей).</li>
+                <li><span class="badge badge-imp">Improvement</span> Интеграция с Tauri v2, обеспечивающая прирост производительности и меньшее потребление ресурсов.</li>
+                <li><span class="badge badge-fix">Fix</span> Исправлена ошибка утечки памяти при переключении между большими категориями.</li>
+                <li><span class="badge badge-fix">Fix</span> Устранено зависание парсинга путей к ресурсам проекта на платформе Windows.</li>
+              </ul>
+              
+              <div class="downloads-section">
+                <h4>Скачать сборку:</h4>
+                <div class="download-buttons">
+                  <a href="#" class="btn btn-download">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                      <path d="M12 2v14M19 9l-7 7-7-7M2 17v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3"></path>
+                    </svg>
+                    <span>macOS (dmg, Apple Silicon / Intel)</span>
+                  </a>
+                  <a href="#" class="btn btn-download">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                      <path d="M12 2v14M19 9l-7 7-7-7M2 17v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3"></path>
+                    </svg>
+                    <span>Windows Portable (exe, x64)</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: EXTENSIONS -->
+    <section id="themes-extensions-tab" class="tab-pane">
+      <div class="themes-ext-container container">
+        <h2 class="section-title">Расширения</h2>
+        <p class="section-subtitle">Добавляйте плагины для расширения базовой функциональности DataForge.</p>
+
+        <div class="info-banner" style="margin-bottom: 32px; text-align: left;">
+          <h3>Хотите создать собственный плагин?</h3>
+          <p>Вы можете легко расширить возможности редактора DataForge, добавив новые типы полей, пользовательские настройки или интеграцию с ОС. Полное руководство по разработке и подробное описание JavaScript/React API доступно в документации: <a href="#plugins-dev" style="color: var(--accent-color); font-weight: 600; text-decoration: underline;">Разработка плагинов (API)</a>.</p>
+        </div>
+
+        <div class="empty-state-extensions" style="text-align: center; padding: 60px 20px; background: var(--bg-panel); border: 1px dashed var(--border-strong); border-radius: 8px; margin-top: 20px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48" style="color: var(--text-muted); margin-bottom: 16px;">
+            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+            <path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/>
+          </svg>
+          <h3 style="margin: 0 0 8px 0; color: var(--text-main); font-size: 18px;">Публичных расширений пока нет</h3>
+          <p style="margin: 0; color: var(--text-muted); font-size: 14px; max-width: 450px; margin-left: auto; margin-right: auto; line-height: 1.5;">В настоящий момент официальный каталог плагинов находится в разработке. Вы можете создавать и тестировать локальные плагины на вашем компьютере.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <span>DataForge</span>
+      </div>
+      <p class="copyright">© 2026 DataForge. Все права защищены. Разработано для разработчиков игр.</p>
+      <div class="footer-links">
+        <a href="#overview">Обзор</a>
+        <a href="#docs">Документация</a>
+        <a href="#releases">Релизы</a>
+        <a href="https://github.com" target="_blank">Репозиторий</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Code -->
+  <script src="app.js"></script>
+</body>
+</html>
