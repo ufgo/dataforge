@@ -1617,3 +1617,42 @@ body.cyberpunk-theme .release-badge {
     display: none;
   }
 }
+
+/* Language Switcher Button Styles */
+.lang-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 6px 10px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 38px;
+}
+.lang-btn:hover {
+  background-color: var(--bg-item-hover);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+body.light-theme .lang-btn:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Multi-language Visibility Rules */
+[lang="en"] {
+  display: none !important;
+}
+body.lang-en [lang="ru"] {
+  display: none !important;
+}
+body.lang-en [lang="en"] {
+  display: revert !important;
+}
+

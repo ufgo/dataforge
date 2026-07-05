@@ -250,9 +250,58 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // --- Language Management (Russian & English) ---
+  const langToggleBtn = document.getElementById("lang-toggle");
+  const mobileLangToggleBtn = document.getElementById("mobile-lang-toggle");
+
+  function setLanguage(lang) {
+    if (lang === "en") {
+      document.body.classList.add("lang-en");
+      document.title = "DataForge - Game Database Editor";
+      localStorage.setItem("dataforge-lang", "en");
+      // Update inputs placeholder
+      document.querySelectorAll("[data-placeholder-en]").forEach(el => {
+        el.placeholder = el.getAttribute("data-placeholder-en");
+      });
+    } else {
+      document.body.classList.remove("lang-en");
+      document.title = "DataForge - Редактор игровых баз данных";
+      localStorage.setItem("dataforge-lang", "ru");
+      // Update inputs placeholder
+      document.querySelectorAll("[data-placeholder-ru]").forEach(el => {
+        el.placeholder = el.getAttribute("data-placeholder-ru");
+      });
+    }
+  }
+
+  // Load saved language, auto-detect from browser settings, or default to Russian
+  let savedLang = localStorage.getItem("dataforge-lang");
+  if (!savedLang) {
+    const browserLang = (navigator.language || navigator.userLanguage || "ru").toLowerCase();
+    savedLang = browserLang.startsWith("en") ? "en" : "ru";
+  }
+  setLanguage(savedLang);
+
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener("click", () => {
+      const currentLang = document.body.classList.contains("lang-en") ? "ru" : "en";
+      setLanguage(currentLang);
+    });
+  }
+
+  if (mobileLangToggleBtn) {
+    mobileLangToggleBtn.addEventListener("click", () => {
+      const currentLang = document.body.classList.contains("lang-en") ? "ru" : "en";
+      setLanguage(currentLang);
+      if (mobileMenu) mobileMenu.classList.remove("open");
+      if (mobileMenuBtn) mobileMenuBtn.classList.remove("active");
+    });
+  }
+
   // Listen for hash changes
   window.addEventListener("hashchange", parseUrlHash);
   
   // Initial routing on page load
   parseUrlHash();
 });
+
