@@ -1656,3 +1656,42 @@ body.lang-en [lang="en"] {
   display: revert !important;
 }
 
+/* Ko-fi Support Button Styling */
+.kofi-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 94, 91, 0.25);
+  background-color: rgba(255, 94, 91, 0.1);
+  color: #ff5e5b;
+  transition: all var(--transition-fast);
+}
+
+.kofi-btn:hover {
+  background-color: rgba(255, 94, 91, 0.2);
+  border-color: #ff5e5b;
+  transform: translateY(-1px);
+}
+
+body.light-theme .kofi-btn {
+  background-color: rgba(255, 94, 91, 0.05);
+}
+
+/* Responsive collapse for header action text on mobile */
+@media (max-width: 600px) {
+  .github-btn span, .kofi-btn span {
+    display: none !important;
+  }
+  .github-btn, .kofi-btn {
+    padding: 8px !important;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+  }
+}
+
+
