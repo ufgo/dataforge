@@ -127,8 +127,8 @@
         <div class="container hero-container">
           <div class="hero-text">
             <div class="badge-new">
-              <span lang="ru">Новая версия v0.0.1 (Alpha) доступна!</span>
-              <span lang="en">New version v0.0.1 (Alpha) is available!</span>
+              <span lang="ru">Новая версия v0.0.1 (Beta) доступна!</span>
+              <span lang="en">New version v0.0.1 (Beta) is available!</span>
             </div>
             <h1>
               <span lang="ru">Проектируйте игровые данные с удовольствием</span>
@@ -456,11 +456,11 @@
               <span lang="en">Installation on Windows</span>
             </h3>
             <ol>
-              <li lang="ru">Перейдите во вкладку <a href="#releases">Релизы</a> и скачайте исполняемый файл для Windows (портативная версия <code>.exe</code>).</li>
-              <li lang="en">Go to the <a href="#releases">Releases</a> tab and download the executable for Windows (portable <code>.exe</code> version).</li>
+              <li lang="ru">Перейдите во вкладку <a href="#releases">Релизы</a> и скачайте установщик Windows (<code>.msi</code>) или портативную версию (<code>.zip</code>).</li>
+              <li lang="en">Go to the <a href="#releases">Releases</a> tab and download the Windows installer (<code>.msi</code>) or portable version (<code>.zip</code>).</li>
               
-              <li lang="ru">Перенесите файл в любую удобную для вас папку. Никакой дополнительной установки не требуется — приложение готово к работе.</li>
-              <li lang="en">Move the file to any directory you prefer. No additional installer configuration is required — the application is ready to run.</li>
+              <li lang="ru">Запустите установщик <code>.msi</code> для стандартной установки или распакуйте архив <code>.zip</code> в любую удобную папку для портативного использования.</li>
+              <li lang="en">Run the <code>.msi</code> installer for a standard setup or extract the <code>.zip</code> archive to any directory for portable use.</li>
               
               <li>
                 <div class="note-box">
@@ -1020,7 +1020,7 @@
           <div class="release-card">
             <div class="release-header">
               <div>
-                <span class="release-ver">v0.0.1 (Alpha-1)</span>
+                <span class="release-ver">v0.0.1 (Beta-1)</span>
                 <span class="release-date">
                   <span lang="ru">Июль 2026</span>
                   <span lang="en">July 2026</span>
@@ -1035,11 +1035,8 @@
                 <span lang="en">What's New:</span>
               </h3>
               <ul>
-                <li><span class="badge badge-feat">Feature</span> <span lang="ru">Полностью переработана визуальная система настройки шаблонов ввода (Layout Constructor).</span><span lang="en">Fully redesigned visual data input template configurator (Layout Constructor).</span></li>
-                <li><span class="badge badge-feat">Feature</span> <span lang="ru">Внедрена архитектура плагинов (JS-расширения для кастомных типов полей).</span><span lang="en">Implemented plugin architecture (JS extensions for registering custom field types).</span></li>
-                <li><span class="badge badge-imp">Improvement</span> <span lang="ru">Интеграция с Tauri v2, обеспечивающая прирост производительности и меньшее потребление ресурсов.</span><span lang="en">Upgraded integration with Tauri v2, delivering faster performance and lower memory footprint.</span></li>
-                <li><span class="badge badge-fix">Fix</span> <span lang="ru">Исправлена ошибка утечки памяти при переключении между большими категориями.</span><span lang="en">Fixed memory leak issues when switching between large dataset categories.</span></li>
-                <li><span class="badge badge-fix">Fix</span> <span lang="ru">Устранено зависание парсинга путей к ресурсам проекта на платформе Windows.</span><span lang="en">Resolved path-parsing thread locks when scanning project assets on Windows.</span></li>
+                <li><span class="badge badge-feat">Release</span> <span lang="ru">Первый публичный бета-релиз DataForge.</span><span lang="en">First public beta release of DataForge.</span></li>
+                <li><span class="badge badge-imp">Info</span> <span lang="ru">В этой версии по сути ничего не добавлено и не изменено, так как это самый первый релиз для тестирования стабильности.</span><span lang="en">No additions or modifications have been made in this version, as this is the very first release to test stability.</span></li>
               </ul>
               
               <div class="downloads-section">
@@ -1048,17 +1045,23 @@
                   <span lang="en">Download Package:</span>
                 </h4>
                 <div class="download-buttons">
-                  <a href="#" class="btn btn-download">
+                  <a href="download/DataForge_0.0.1_x64_en-US.msi" class="btn btn-download">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
                       <path d="M12 2v14M19 9l-7 7-7-7M2 17v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3"></path>
                     </svg>
-                    <span>macOS (dmg, Apple Silicon / Intel)</span>
+                    <span>Windows Installer (msi, x64)</span>
                   </a>
-                  <a href="#" class="btn btn-download">
+                  <a href="download/dataforge_0.0.1_win.zip" class="btn btn-download">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
                       <path d="M12 2v14M19 9l-7 7-7-7M2 17v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3"></path>
                     </svg>
-                    <span>Windows Portable (exe, x64)</span>
+                    <span>Windows Portable (zip, x64)</span>
+                  </a>
+                  <a href="#" class="btn btn-download" style="opacity: 0.6; cursor: not-allowed; pointer-events: none;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                      <path d="M12 2v14M19 9l-7 7-7-7M2 17v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3"></path>
+                    </svg>
+                    <span>macOS (dmg, Apple Silicon / Intel) — <span lang="ru">Скоро</span><span lang="en">Coming Soon</span></span>
                   </a>
                 </div>
               </div>
