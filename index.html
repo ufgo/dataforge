@@ -1065,17 +1065,35 @@
                     </svg>
                     <span>Windows Installer (msi, x64)</span>
                   </a>
-                  <a href="download/dataforge_0.0.1_win.zip" class="btn btn-download">
+                  <a href="download/DataForge_0.0.1_x64-setup.exe" class="btn btn-download">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
                       <path d="M12 2v14M19 9l-7 7-7-7M2 17v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3"></path>
                     </svg>
-                    <span>Windows Portable (zip, x64)</span>
+                    <span>Windows Setup (exe, x64)</span>
                   </a>
-                  <a href="#" class="btn btn-download" style="opacity: 0.6; cursor: not-allowed; pointer-events: none;">
+                  <a href="download/DataForge_0.0.1_aarch64.dmg" class="btn btn-download">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
                       <path d="M12 2v14M19 9l-7 7-7-7M2 17v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3"></path>
                     </svg>
-                    <span>macOS (dmg, Apple Silicon / Intel) — <span lang="ru">Скоро</span><span lang="en">Coming Soon</span></span>
+                    <span>macOS (dmg, Apple Silicon)</span>
+                  </a>
+                  <a href="download/DataForge_0.0.1_amd64.deb" class="btn btn-download">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                      <path d="M12 2v14M19 9l-7 7-7-7M2 17v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3"></path>
+                    </svg>
+                    <span>Linux (deb, amd64)</span>
+                  </a>
+                  <a href="download/DataForge-0.0.1-1.x86_64.rpm" class="btn btn-download">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                      <path d="M12 2v14M19 9l-7 7-7-7M2 17v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3"></path>
+                    </svg>
+                    <span>Linux (rpm, x86_64)</span>
+                  </a>
+                  <a href="download/DataForge_0.0.1_amd64.AppImage" class="btn btn-download">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                      <path d="M12 2v14M19 9l-7 7-7-7M2 17v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3"></path>
+                    </svg>
+                    <span>Linux (AppImage, amd64)</span>
                   </a>
                 </div>
               </div>
@@ -1107,19 +1125,28 @@
           <p lang="en">You can easily extend the capabilities of DataForge by adding new field types, custom settings, or OS-level integrations. The complete developer guide and JS/React API specification are available in the documentation: <a href="#plugins-dev" style="color: var(--accent-color); font-weight: 600; text-decoration: underline;">Plugin Development (API)</a>.</p>
         </div>
 
-        <div class="empty-state-extensions" style="text-align: center; padding: 60px 20px; background: var(--bg-panel); border: 1px dashed var(--border-strong); border-radius: 8px; margin-top: 20px;">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48" style="color: var(--text-muted); margin-bottom: 16px;">
-            <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-            <path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/>
-          </svg>
-          <h3 style="margin: 0 0 8px 0; color: var(--text-main); font-size: 18px;">
-            <span lang="ru">Публичных расширений пока нет</span>
-            <span lang="en">No public extensions yet</span>
-          </h3>
-          <p style="margin: 0; color: var(--text-muted); font-size: 14px; max-width: 450px; margin-left: auto; margin-right: auto; line-height: 1.5;">
-            <span lang="ru">В настоящий момент официальный каталог плагинов находится в разработке. Вы можете создавать и тестировать локальные плагины на вашем компьютере.</span>
-            <span lang="en">The official plugin repository is currently under development. You can write and test local plugins on your machine.</span>
-          </p>
+        <div class="extensions-list" style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px;">
+          <div class="extension-card" style="background: var(--bg-panel); border: 1px solid var(--border-strong); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 12px; transition: transform 0.2s, box-shadow 0.2s;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <h3 style="margin: 0; color: var(--text-main); font-size: 18px; font-weight: 600;">Defold Engine Support</h3>
+              <span class="badge" style="font-size: 12px; padding: 4px 8px; border-radius: 4px; background: rgba(10, 132, 255, 0.1); color: var(--accent-color); font-weight: 600;">v1.0.0</span>
+            </div>
+            <p style="margin: 0; color: var(--text-muted); font-size: 14px; line-height: 1.5;">
+              <span lang="ru">Добавляет поддержку интеграции с проектами Defold, включая чтение файлов атласов (.atlas) и предпросмотр анимаций и изображений из них.</span>
+              <span lang="en">Adds support for Defold project integration, including reading .atlas files and previewing animations and images from them.</span>
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+              <span style="font-size: 13px; color: var(--text-secondary);">By Alexander Bulatov</span>
+              <a href="plugins/defold.js.zip" class="btn" style="padding: 6px 16px; font-size: 13px; background: var(--accent-color); color: #fff; text-decoration: none; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px; font-weight: 500; border: none; cursor: pointer;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span lang="ru">Скачать</span><span lang="en">Download</span>
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>
