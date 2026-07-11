@@ -142,6 +142,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const linkHash = link.getAttribute("href").replace("#", "");
       if (linkHash === cleanId) {
         link.classList.add("active");
+        // Auto expand parent chapter
+        const chapter = link.closest(".docs-chapter");
+        if (chapter && chapter.classList.contains("collapsed")) {
+          chapter.classList.remove("collapsed");
+        }
       } else {
         link.classList.remove("active");
       }
@@ -297,6 +302,89 @@ document.addEventListener("DOMContentLoaded", () => {
       if (mobileMenuBtn) mobileMenuBtn.classList.remove("active");
     });
   }
+
+  // --- Docs Collapsible Chapters Click Handler ---
+  const chapters = document.querySelectorAll(".docs-chapter");
+  chapters.forEach(chapter => {
+    const title = chapter.querySelector(".docs-chapter-title");
+    if (title) {
+      title.addEventListener("click", () => {
+        chapter.classList.toggle("collapsed");
+      });
+    }
+  });
+
+  // --- Dynamic Next/Prev Documentation Navigation Footer ---
+  const docSectionsList = Array.from(document.querySelectorAll(".doc-section"));
+  docSectionsList.forEach((section, index) => {
+    const prevSection = docSectionsList[index - 1];
+    const nextSection = docSectionsList[index + 1];
+
+    if (!prevSection && !nextSection) return;
+
+    const navDiv = document.createElement("div");
+    navDiv.className = "doc-section-nav";
+
+    if (prevSection) {
+      const prevId = prevSection.id.replace("doc-", "");
+      const prevLink = document.querySelector(`.docs-link[href="#${prevId}"]`);
+      if (prevLink) {
+        const prevTitleHTML = prevLink.innerHTML;
+        const prevBtn = document.createElement("a");
+        prevBtn.href = `#${prevId}`;
+        prevBtn.className = "doc-nav-btn doc-nav-prev";
+        prevBtn.innerHTML = `
+          <span class="arrow">←</span>
+          <div class="nav-btn-info">
+            <span class="nav-label" lang="ru">Назад</span><span class="nav-label" lang="en">Previous</span>
+            <span class="nav-title">${prevTitleHTML}</span>
+          </div>
+        `;
+        prevBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          switchDocSection(prevId);
+          window.location.hash = prevId;
+          if (window.innerWidth <= 960) {
+            document.querySelector(".docs-content").scrollIntoView({ behavior: "smooth" });
+          } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        });
+        navDiv.appendChild(prevBtn);
+      }
+    }
+
+    if (nextSection) {
+      const nextId = nextSection.id.replace("doc-", "");
+      const nextLink = document.querySelector(`.docs-link[href="#${nextId}"]`);
+      if (nextLink) {
+        const nextTitleHTML = nextLink.innerHTML;
+        const nextBtn = document.createElement("a");
+        nextBtn.href = `#${nextId}`;
+        nextBtn.className = "doc-nav-btn doc-nav-next";
+        nextBtn.innerHTML = `
+          <div class="nav-btn-info">
+            <span class="nav-label" lang="ru">Далее</span><span class="nav-label" lang="en">Next</span>
+            <span class="nav-title">${nextTitleHTML}</span>
+          </div>
+          <span class="arrow">→</span>
+        `;
+        nextBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          switchDocSection(nextId);
+          window.location.hash = nextId;
+          if (window.innerWidth <= 960) {
+            document.querySelector(".docs-content").scrollIntoView({ behavior: "smooth" });
+          } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        });
+        navDiv.appendChild(nextBtn);
+      }
+    }
+
+    section.appendChild(navDiv);
+  });
 
   // Listen for hash changes
   window.addEventListener("hashchange", parseUrlHash);

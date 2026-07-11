@@ -165,39 +165,7 @@
             </div>
           </div>
           <div class="hero-visual">
-            <div class="visual-card">
-              <div class="card-header-mock">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="title-mock">DataForge Editor — /projects/rpg_db</span>
-              </div>
-              <div class="card-body-mock">
-                <div class="sidebar-mock">
-                  <div class="mock-item active">⚔️ Items</div>
-                  <div class="mock-item">👾 Enemies</div>
-                  <div class="mock-item">📜 Quests</div>
-                  <div class="mock-item">⚙️ Settings</div>
-                </div>
-                <div class="content-mock">
-                  <div class="mock-header">
-                    <h4>Sword of Souls</h4>
-                    <span class="mock-tag">weapon</span>
-                  </div>
-                  <div class="mock-fields">
-                    <div class="mock-field-row"><span class="lbl">ID:</span><span class="val mono">sword_of_souls</span></div>
-                    <div class="mock-field-row"><span class="lbl">Name:</span><span class="val">Меч Душ</span></div>
-                    <div class="mock-field-row"><span class="lbl">Damage:</span><span class="val number">145</span></div>
-                    <div class="mock-field-row"><span class="lbl">Magic Element:</span><span class="val dropdown">Shadow</span></div>
-                    <div class="mock-field-row">
-                      <span class="lbl">Rarity Color:</span>
-                      <span class="val color-preview" style="background-color: #8a2be2;"></span>
-                      <span class="val mono">#8A2BE2</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img src="images/title.png" alt="DataForge Editor" class="hero-image">
           </div>
         </div>
       </div>
@@ -347,41 +315,101 @@
           </div>
           
           <ul class="docs-menu">
-            <li class="docs-menu-item">
-              <a href="#intro" class="docs-link active">
-                <span lang="ru">Введение</span><span lang="en">Introduction</span>
-              </a>
-            </li>
-            <li class="docs-menu-item">
-              <a href="#installation" class="docs-link">
-                <span lang="ru">Установка и Требования</span><span lang="en">Installation & Requirements</span>
-              </a>
-            </li>
-            <li class="docs-menu-item">
-              <a href="#categories" class="docs-link">
-                <span lang="ru">Категории и Наследование</span><span lang="en">Categories & Inheritance</span>
-              </a>
-            </li>
-            <li class="docs-menu-item">
-              <a href="#fields" class="docs-link">
-                <span lang="ru">Поля и Валидация</span><span lang="en">Fields & Validation</span>
-              </a>
-            </li>
-            <li class="docs-menu-item">
-              <a href="#layouts" class="docs-link">
-                <span lang="ru">Настройка Внешнего Вида</span><span lang="en">Visual Layouts</span>
-              </a>
-            </li>
-            <li class="docs-menu-item">
-              <a href="#export" class="docs-link">
-                <span lang="ru">Импорт и Экспорт</span><span lang="en">Import & Export</span>
-              </a>
-            </li>
-            <li class="docs-menu-item">
-              <a href="#plugins-dev" class="docs-link">
-                <span lang="ru">Разработка плагинов (API)</span><span lang="en">Plugin Development (API)</span>
-              </a>
-            </li>
+            <div class="docs-chapter collapsed">
+              <div class="docs-chapter-title">
+                <span lang="ru">Глава 1: Основы и Интерфейс</span>
+                <span lang="en">Chapter 1: Basics</span>
+              </div>
+              <ul class="docs-chapter-items">
+                <li class="docs-menu-item">
+                  <a href="#intro" class="docs-link active">
+                    <span lang="ru">Введение в DataForge</span><span lang="en">Introduction</span>
+                  </a>
+                </li>
+                <li class="docs-menu-item">
+                  <a href="#installation" class="docs-link">
+                    <span lang="ru">Установка и Требования</span><span lang="en">Installation & Setup</span>
+                  </a>
+                </li>
+                <li class="docs-menu-item">
+                  <a href="#navigation" class="docs-link">
+                    <span lang="ru">Рабочая Область и Поиск</span><span lang="en">Workspace & Search</span>
+                  </a>
+                </li>
+                <li class="docs-menu-item">
+                  <a href="#app-settings" class="docs-link">
+                    <span lang="ru">Настройки Приложения</span><span lang="en">App Settings</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="docs-chapter collapsed">
+              <div class="docs-chapter-title">
+                <span lang="ru">Глава 2: Проектирование Схемы</span>
+                <span lang="en">Chapter 2: Data Schema</span>
+              </div>
+              <ul class="docs-chapter-items">
+                <li class="docs-menu-item">
+                  <a href="#categories" class="docs-link">
+                    <span lang="ru">Категории и Структура</span><span lang="en">Categories & Schema</span>
+                  </a>
+                </li>
+                <li class="docs-menu-item">
+                  <a href="#fields" class="docs-link">
+                    <span lang="ru">Поля и Валидация</span><span lang="en">Fields & Validation</span>
+                  </a>
+                </li>
+                <li class="docs-menu-item">
+                  <a href="#layouts" class="docs-link">
+                    <span lang="ru">Макеты Форм ввода</span><span lang="en">Input Form Layouts</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="docs-chapter collapsed">
+              <div class="docs-chapter-title">
+                <span lang="ru">Глава 3: Управление Контентом</span>
+                <span lang="en">Chapter 3: Content</span>
+              </div>
+              <ul class="docs-chapter-items">
+                <li class="docs-menu-item">
+                  <a href="#items" class="docs-link">
+                    <span lang="ru">Управление Элементами</span><span lang="en">Managing Items</span>
+                  </a>
+                </li>
+                <li class="docs-menu-item">
+                  <a href="#locks" class="docs-link">
+                    <span lang="ru">Система Замков</span><span lang="en">Value Locks System</span>
+                  </a>
+                </li>
+                <li class="docs-menu-item">
+                  <a href="#export" class="docs-link">
+                    <span lang="ru">Импорт и Экспорт</span><span lang="en">Import & Export</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="docs-chapter collapsed">
+              <div class="docs-chapter-title">
+                <span lang="ru">Глава 4: Расширение и Справка</span>
+                <span lang="en">Chapter 4: Extensions</span>
+              </div>
+              <ul class="docs-chapter-items">
+                <li class="docs-menu-item">
+                  <a href="#plugins-dev" class="docs-link">
+                    <span lang="ru">Разработка плагинов (API)</span><span lang="en">Plugin Development</span>
+                  </a>
+                </li>
+                <li class="docs-menu-item">
+                  <a href="#hotkeys" class="docs-link">
+                    <span lang="ru">Горячие Клавиши</span><span lang="en">Keyboard Shortcuts</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </ul>
         </aside>
 
@@ -394,43 +422,53 @@
               <span lang="ru">Введение в DataForge</span>
               <span lang="en">Introduction to DataForge</span>
             </h2>
-            <p lang="ru"><strong>DataForge</strong> — это кроссплатформенное приложение с графическим интерфейсом, предназначенное для организации баз данных игровых проектов. Оно решает проблему хаоса в статических ресурсах игры (таких как характеристики оружия, параметры монстров, балансировочные коэффициенты квестов и сценарии диалогов).</p>
-            <p lang="en"><strong>DataForge</strong> is a cross-platform desktop application with a graphic user interface designed to organize game project databases. It resolves content chaos in static game resources (such as weapon attributes, monster stats, quest balance variables, and dialogue scripts).</p>
+            <p lang="ru"><strong>DataForge</strong> — это мощное, кроссплатформенное десктопное приложение с графическим интерфейсом, созданное специально для геймдизайнеров, сценаристов и разработчиков игр. Оно предназначено для структурирования, наполнения и поддержки статических игровых баз данных (таких как характеристики оружия, параметры монстров, ветки диалогов, квесты и баланс).</p>
+            <p lang="en"><strong>DataForge</strong> is a powerful, cross-platform desktop application with a graphical user interface tailored for game designers, writers, and developers. It is designed to structure, populate, and maintain static game databases (such as weapon stats, monster attributes, dialogue trees, quests, and balance values).</p>
             
-            <p lang="ru">В отличие от тяжелых СУБД (SQL) или обычных текстовых редакторов, DataForge предлагает интуитивный интерфейс, где структура данных (схема) и сам контент разделены, но редактируются в одном месте.</p>
-            <p lang="en">Unlike heavy databases (SQL) or basic text editors, DataForge offers an intuitive interface where the data structure (schema) and the content itself are separated but edited together in one workspace.</p>
-            
+            <p lang="ru">В отличие от громоздких систем управления базами данных (СУБД вроде MySQL/PostgreSQL) или простых таблиц Excel/Google Sheets, DataForge разделяет структуру данных (схему/шаблон) и непосредственное наполнение (элементы), при этом позволяя редактировать их параллельно в едином окне. Это исключает риск повреждения файлов разметки и ускоряет работу с балансом игры в разы.</p>
+            <p lang="en">Unlike bulky relational database management systems (SQL databases) or spreadsheet editors like Excel/Google Sheets, DataForge strictly separates data structures (schemas/templates) from actual data content (items), while allowing you to edit them side-by-side. This prevents syntax corruption and accelerates balance tuning tenfold.</p>
+
+            <figure class="doc-image">
+              <img src="images/main_interface.png" alt="DataForge Main Workspace Interface">
+              <figcaption>
+                <span lang="ru">Интерфейс программы DataForge</span>
+                <span lang="en">DataForge Main Workspace Interface</span>
+              </figcaption>
+            </figure>
+
             <div class="note-box">
-              <strong lang="ru">💡 Универсальность для любых движков:</strong>
-              <strong lang="en">💡 Universal for All Engines:</strong>
-              <span lang="ru">DataForge спроектирован так, чтобы не зависеть от конкретной платформы. Независимо от того, используете ли вы Unity, Unreal Engine, Godot, Defold или LÖVE2D, вы можете экспортировать свои структуры данных в форматы, поддерживаемые любым современным движком.</span>
-              <span lang="en">DataForge is designed to be completely engine-agnostic. Whether you use Unity, Unreal Engine, Godot, Defold, or LÖVE2D, you can export your data structures into formats supported by any modern game engine.</span>
+              <strong lang="ru">💡 Полная независимость от движка:</strong>
+              <strong lang="en">💡 Complete Engine Agnostic:</strong>
+              <span lang="ru">DataForge не привязан к конкретному языку или фреймворку. Независимо от того, разрабатываете ли вы на Unity (C#), Unreal Engine (C++/Blueprints), Godot (GDScript/C#), Defold (Lua) или LÖVE2D, вы можете экспортировать свою базу данных в чистый JSON, CSV или Lua-таблицы, готовые к импорту.</span>
+              <span lang="en">DataForge is not bound to any specific programming language or framework. Whether you develop games in Unity (C#), Unreal Engine (C++/Blueprints), Godot (GDScript/C#), Defold (Lua), or LÖVE2D, you can export your database as clean JSON, CSV, or Lua tables ready for runtime loading.</span>
             </div>
 
             <h3>
-              <span lang="ru">Ключевые Концепции</span>
-              <span lang="en">Key Concepts</span>
+              <span lang="ru">Базовые понятия</span>
+              <span lang="en">Core Concepts</span>
             </h3>
+            <p lang="ru">Архитектура DataForge построена на четырех основных элементах:</p>
+            <p lang="en">DataForge architecture centers around four main pillars:</p>
             <ul>
               <li>
-                <strong lang="ru">Категории (Categories)</strong><strong lang="en">Categories</strong>
-                <span lang="ru"> — это описание структуры таблицы. Например, категория "Оружие".</span>
-                <span lang="en"> — descriptions of table structures. For example, the "Weapons" category.</span>
+                <strong lang="ru">Категории (Categories):</strong><strong lang="en">Categories:</strong>
+                <span lang="ru"> Описание структуры или типа данных. Это аналог класса в ООП или таблицы в реляционных базах. Например, категория "Персонажи".</span>
+                <span lang="en"> The blueprint structures or data types. Similar to classes in OOP or tables in SQL. For instance, the "Characters" category.</span>
               </li>
               <li>
-                <strong lang="ru">Поля (Fields)</strong><strong lang="en">Fields</strong>
-                <span lang="ru"> — столбцы с определенным типом данных в категории. Например, `damage` (число) или `icon` (путь к картинке).</span>
-                <span lang="en"> — columns with a specific data type in a category. For example, `damage` (number) or `icon` (image path).</span>
+                <strong lang="ru">Поля (Fields):</strong><strong lang="en">Fields:</strong>
+                <span lang="ru"> Конкретные параметры, которыми обладают сущности в категории. Каждое поле имеет определенный тип (строка, число, ссылка и др.) и настройки валидации. Например: здоровье (Number), имя (String), иконка (Image).</span>
+                <span lang="en"> Specific properties belonging to entities in a category. Each field has a defined data type (string, number, reference, etc.) and validation rules. E.g., health (Number), name (String), avatar (Image).</span>
               </li>
               <li>
-                <strong lang="ru">Макет (Layout)</strong><strong lang="en">Layout</strong>
-                <span lang="ru"> — схема того, как поля будут скомпонованы на экране при редактировании. Позволяет структурировать форму ввода и визуально группировать поля по смыслу.</span>
-                <span lang="en"> — layouts of how fields are arranged visually on screen. Allows structuring input forms and grouping properties by meaning.</span>
+                <strong lang="ru">Макеты (Layouts):</strong><strong lang="en">Layouts:</strong>
+                <span lang="ru"> Способ визуального отображения полей ввода на экране. Позволяет группировать поля в горизонтальные или вертикальные контейнеры, добавлять текстовые заголовки и разделители для удобной работы.</span>
+                <span lang="en"> Visual layout templates for fields on the screen. Allows organizing fields into vertical or horizontal tabs/containers, adding text headers, and dividers to improve workspace ergonomics.</span>
               </li>
               <li>
-                <strong lang="ru">Элементы (Items)</strong><strong lang="en">Items</strong>
-                <span lang="ru"> — конкретные строки данных. Например, `Sword of Souls` со всеми его характеристиками.</span>
-                <span lang="en"> — concrete rows of data. For example, `Sword of Souls` with all its values.</span>
+                <strong lang="ru">Элементы (Items):</strong><strong lang="en">Items:</strong>
+                <span lang="ru"> Конечные строковые записи данных. Например, предмет "Световой меч" со всеми заполненными параметрами, унаследованными от категории "Оружие".</span>
+                <span lang="en"> The final item record entries. E.g., a "Lightsaber" item with specific attribute values configured, derived from the parent "Weapons" category.</span>
               </li>
             </ul>
           </div>
@@ -441,109 +479,400 @@
               <span lang="ru">Установка и Требования</span>
               <span lang="en">Installation & Requirements</span>
             </h2>
-            <p lang="ru">Приложение DataForge поставляется в виде готовых бинарных файлов для операционных систем <strong>macOS</strong> и <strong>Windows</strong>. Вам не требуется скачивать исходный код или настраивать среду разработки для запуска.</p>
-            <p lang="en">DataForge is distributed as prebuilt binaries for <strong>macOS</strong> and <strong>Windows</strong> operating systems. You do not need to download the source code or set up a developer compilation workspace to run it.</p>
+            <p lang="ru">DataForge распространяется в виде скомпилированных готовых пакетов и не требует установки сторонних библиотек, компиляторов или зависимостей. Все Tauri-модули поставляются "из коробки".</p>
+            <p lang="en">DataForge is distributed as self-contained precompiled binary files and does not require third-party libraries, runtime engines, or compilers. All native Tauri dependencies are packed out of the box.</p>
+
             
+
             <h3>
               <span lang="ru">Установка на macOS</span>
               <span lang="en">Installation on macOS</span>
             </h3>
             <ol>
-              <li lang="ru">Перейдите во вкладку <a href="#releases">Релизы</a> и скачайте сборку для macOS (файл <code>.dmg</code>).</li>
-              <li lang="en">Go to the <a href="#releases">Releases</a> tab and download the macOS build (<code>.dmg</code> file).</li>
+              <li lang="ru">Перейдите во вкладку <a href="#releases">Релизы</a> и скачайте DMG-образ для вашей архитектуры процессора (Intel или Apple Silicon).</li>
+              <li lang="en">Go to the <a href="#releases">Releases</a> tab and download the appropriate DMG file matching your hardware architecture (Intel or Apple Silicon).</li>
               
-              <li lang="ru">Откройте скачанный DMG-образ и перетащите иконку <strong>DataForge</strong> в папку <strong>Applications</strong> (Программы).</li>
-              <li lang="en">Open the downloaded DMG image and drag the <strong>DataForge</strong> icon into the <strong>Applications</strong> folder.</li>
-              
-              <li>
-                <div class="note-box">
-                  <strong lang="ru">⚠️ Примечание безопасности:</strong>
-                  <strong lang="en">⚠️ Security Notice:</strong>
-                  <span lang="ru">Так как приложение распространяется напрямую без публикации в Mac App Store, при первом запуске macOS может заблокировать его. Чтобы обойти это, кликните по иконке приложения правой кнопкой мыши (или зажав Control), выберите <strong>Открыть</strong>, а затем подтвердите запуск в появившемся окне.</span>
-                  <span lang="en">Because the application is distributed directly outside the Mac App Store, macOS may block it on first run. To bypass this, right-click (or Control-click) the application icon, select <strong>Open</strong>, and confirm the execution in the popup window.</span>
-                </div>
-              </li>
+              <li lang="ru">Смонтируйте скачанный DMG-образ двойным кликом и перетащите иконку <strong>DataForge</strong> в папку <strong>Applications</strong> (Программы).</li>
+              <li lang="en">Double-click the downloaded DMG archive to mount it, and drag-and-drop the <strong>DataForge</strong> icon into your <strong>Applications</strong> folder.</li>
             </ol>
+            <div class="warning-box">
+              <strong lang="ru">⚠️ Обход системы безопасности macOS Gatekeeper:</strong>
+              <strong lang="en">⚠️ Bypassing macOS Gatekeeper blocks:</strong>
+              <span lang="ru">Так как сборки не подписаны коммерческим сертификатом Apple, при первом запуске Finder выдаст предупреждение. Чтобы запустить программу: нажмите правой кнопкой мыши (или с зажатой клавишей Control) на иконку DataForge в папке "Программы", выберите <strong>Открыть</strong>, а затем подтвердите запуск во всплывающем диалоговом окне. Это нужно сделать лишь один раз.</span>
+              <span lang="en">Because binaries are distributed directly and are not code-signed with a paid Apple developer certificate, macOS will block execution on first launch. To bypass this warning: right-click (or Control-click) the DataForge app icon inside the Applications folder, select <strong>Open</strong>, and click <strong>Open</strong> again in the security dialogue. This bypass is required only once.</span>
+            </div>
 
             <h3>
               <span lang="ru">Установка на Windows</span>
               <span lang="en">Installation on Windows</span>
             </h3>
             <ol>
-              <li lang="ru">Перейдите во вкладку <a href="#releases">Релизы</a> и скачайте установщик Windows (<code>.msi</code>) или портативную версию (<code>.zip</code>).</li>
-              <li lang="en">Go to the <a href="#releases">Releases</a> tab and download the Windows installer (<code>.msi</code>) or portable version (<code>.zip</code>).</li>
+              <li lang="ru">Скачайте установщик <code>.msi</code> или портативную <code>.zip</code>-версию в разделе релизов.</li>
+              <li lang="en">Download either the standard <code>.msi</code> installer or the portable <code>.zip</code> package from the releases tab.</li>
               
-              <li lang="ru">Запустите установщик <code>.msi</code> для стандартной установки или распакуйте архив <code>.zip</code> в любую удобную папку для портативного использования.</li>
-              <li lang="en">Run the <code>.msi</code> installer for a standard setup or extract the <code>.zip</code> archive to any directory for portable use.</li>
-              
-              <li>
-                <div class="note-box">
-                  <strong lang="ru">⚠️ Примечание безопасности:</strong>
-                  <strong lang="en">⚠️ Security Notice:</strong>
-                  <span lang="ru">Поскольку приложение распространяется напрямую, фильтр Windows SmartScreen может выдать предупреждение об "Неизвестном издателе". В этом случае нажмите ссылку <strong>Подробнее</strong> (More info), а затем кнопку <strong>Выполнить в любом случае</strong> (Run anyway).</span>
-                  <span lang="en">Since the application is distributed directly, Windows SmartScreen may show an "Unknown publisher" warning. In this case, click the <strong>More info</strong> link, then click the <strong>Run anyway</strong> button.</span>
-                </div>
-              </li>
+              <li lang="ru">Запустите установщик <code>.msi</code> для стандартного развертывания или распакуйте <code>.zip</code>-архив в удобную папку для портативного использования.</li>
+              <li lang="en">Run the <code>.msi</code> installer file to complete a wizard installation, or unzip the <code>.zip</code> archive into a directory of your choice for portable execution.</li>
             </ol>
+            <div class="warning-box">
+              <strong lang="ru">⚠️ Фильтр Windows SmartScreen:</strong>
+              <strong lang="en">⚠️ Windows SmartScreen Blocks:</strong>
+              <span lang="ru">При запуске инсталлятора Windows Defender SmartScreen может показать синее окно с предупреждением о неизвестном издателе. Нажмите кнопку <strong>Подробнее</strong> (More info), а затем выберите <strong>Выполнить в любом случае</strong> (Run anyway), чтобы продолжить установку.</span>
+              <span lang="en">When launching the installer, Windows SmartScreen may present a security pop-up stating the publisher is unrecognized. Click <strong>More info</strong>, then click <strong>Run anyway</strong> to proceed with the setup.</span>
+            </div>
+
+            <h3>
+              <span lang="ru">Установка на Linux</span>
+              <span lang="en">Installation on Linux</span>
+            </h3>
+            <ul>
+              <li>
+                <span lang="ru">Для Debian/Ubuntu-дистрибутивов: скачайте <code>.deb</code>-пакет и установите его командой <code>sudo dpkg -i DataForge_*.deb</code>.</span>
+                <span lang="en">For Debian/Ubuntu systems: download the <code>.deb</code> pack and install it via terminal: <code>sudo dpkg -i DataForge_*.deb</code>.</span>
+              </li>
+              <li>
+                <span lang="ru">Для RedHat/Fedora: скачайте и установите <code>.rpm</code>-пакет.</span>
+                <span lang="en">For RedHat/Fedora systems: download and install the <code>.rpm</code> package.</span>
+              </li>
+              <li>
+                <span lang="ru">Для портативного использования: скачайте <code>.AppImage</code>-файл, сделайте его исполняемым (<code>chmod +x DataForge.AppImage</code>) и запустите.</span>
+                <span lang="en">For portable usage: download the <code>.AppImage</code> file, grant it executable permissions (<code>chmod +x DataForge.AppImage</code>), and execute.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- DOC SECTION: Workspace & Search -->
+          <div id="doc-navigation" class="doc-section">
+            <h2>
+              <span lang="ru">Рабочая Область и Поиск</span>
+              <span lang="en">Workspace & Search</span>
+            </h2>
+            <p lang="ru">Интерфейс DataForge оптимизирован для быстрого доступа к данным с помощью мыши и горячих клавиш. Рабочая область разделена на левую боковую панель (дерево категорий и элементов) и главную панель редактирования.</p>
+            <p lang="en">The DataForge UI is built for high speed mouse and keyboard operations. The workspace is split into a left sidebar (explorer tree of categories and items) and a main editor viewport pane.</p>
+
+            <figure class="doc-image">
+              <img src="images/sidebar_resize.png" alt="Sidebar dragging and resizing boundaries">
+              <figcaption>
+                <span lang="ru">Изменение размера боковой панели перетягиванием</span>
+                <span lang="en">Sidebar dragging and resizing boundaries</span>
+              </figcaption>
+            </figure>
+
+            <h3>
+              <span lang="ru">Изменение размера левой панели перетягиванием</span>
+              <span lang="en">Left Sidebar Drag Resizing</span>
+            </h3>
+            <p lang="ru">Вы можете в любой момент настроить ширину левого сайдбара, чтобы он не обрезал длинные названия категорий или, наоборот, освободить больше места для формы редактирования полей. Для этого наведите курсор мыши на правый край боковой панели (граница с разделителем). Курсор изменит форму на двустороннюю стрелку изменения размера (<code>col-resize</code>). Зажмите левую кнопку мыши и перетащите границу. Ширина панели программно ограничена диапазоном от <strong>150px</strong> до <strong>800px</strong> для предотвращения случайного схлопывания.</p>
+            <p lang="en">You can adjust the width of the left sidebar at any time to prevent clipping long category titles or to reclaim screen space for fields editing. Hover your mouse cursor over the right border divider line of the sidebar. The pointer will change to a horizontal resize icon (<code>col-resize</code>). Click and hold down the left mouse button, then drag the boundary. The panel width is constrained programmatically between <strong>150px</strong> and <strong>800px</strong> to avoid total collapse.</p>
+
+            <h3>
+              <span lang="ru">Навигация с клавиатуры по дереву категорий</span>
+              <span lang="en">Keyboard Tree Explorer Navigation</span>
+            </h3>
+            <p lang="ru">Для быстрого перемещения между элементами дерева без мыши поддерживается полноценная навигация с клавиатуры. Когда фокус ввода не находится внутри текстового поля:</p>
+            <p lang="en">To browse the entity list quickly without relying on mouse pointing, you can utilize built-in keyboard navigation. When you are not actively focusing text fields:</p>
+            <ul>
+              <li>
+                <span lang="ru">Клавиши <strong>Стрелка вверх (ArrowUp)</strong> и <strong>Стрелка вниз (ArrowDown)</strong> позволяют передвигаться вверх и вниз по списку видимых категорий и элементов в дереве.</span>
+                <span lang="en">Pressing <strong>ArrowUp</strong> or <strong>ArrowDown</strong> cycles the highlight selector up and down through all visible node items in the explorer tree.</span>
+              </li>
+              <li>
+                <span lang="ru">Нажатие клавиши <strong>Enter</strong> мгновенно выбирает подсвеченную категорию или элемент и открывает форму её редактирования в главном окне.</span>
+                <span lang="en">Pressing <strong>Enter</strong> selects the highlighted category or item and opens its editor form inside the main viewport.</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span lang="ru">Быстрый поиск в проекте (Cmd+F / Ctrl+F)</span>
+              <span lang="en">Global Search & Filtering (Cmd+F / Ctrl+F)</span>
+            </h3>
+            <p lang="ru">Поиск в DataForge является живым и фильтрует данные на лету. Вы можете сфокусироваться на поле поиска в левой панели вручную или нажать горячие клавиши <strong>Cmd + F</strong> (на macOS) / <strong>Ctrl + F</strong> (на Windows/Linux).</p>
+            <p lang="en">DataForge's search feature is live, filtering records instantly. You can click on the sidebar search box directly or press the <strong>Cmd + F</strong> (macOS) / <strong>Ctrl + F</strong> (Windows/Linux) global hotkey.</p>
+            <p lang="ru">Поисковый алгоритм сканирует не только заголовки категорий и названия элементов, но и их внутренние идентификаторы (ID), а также текстовые значения внутри полей элементов. Вся структура дерева моментально подстраивается, скрывая неподходящие ветки и подсвечивая совпадения.</p>
+            <p lang="en">The search engine queries not only category names and item names, but also evaluates their database IDs and values inside text-based fields. The sidebar explorer tree dynamically collapses and highlights matching elements as you type.</p>
+
+            <h3>
+              <span lang="ru">Режим Просмотра: Таблица и Галерея (Table / Gallery)</span>
+              <span lang="en">View Mode: Table &amp; Gallery</span>
+            </h3>
+            <p lang="ru">При выборе категории в боковой панели, в правом верхнем углу контента появляется переключатель режима просмотра: <strong>Table</strong> и <strong>Gallery</strong>.</p>
+            <p lang="en">When a category is selected in the sidebar, a view mode toggle appears in the top-right content area: <strong>Table</strong> and <strong>Gallery</strong>.</p>
+            <ul>
+              <li>
+                <strong lang="ru">Режим Таблицы (Table):</strong><strong lang="en">Table Mode:</strong>
+                <span lang="ru"> Все элементы категории отображаются в виде компактной сетки-таблицы, где каждая строка — элемент, а каждый столбец — поле. Позволяет редактировать значения прямо в ячейках таблицы без открытия полной карточки элемента.</span>
+                <span lang="en"> All category items are shown in a compact spreadsheet-style grid. Each row is an item, each column a field. Values can be edited directly inline in the table cells without opening the full item card.</span>
+              </li>
+              <li>
+                <strong lang="ru">Режим Галереи (Gallery):</strong><strong lang="en">Gallery Mode:</strong>
+                <span lang="ru"> Элементы отображаются в виде карточек-превью. Если в категории есть поле типа <code>Image</code> или <code>Atlas</code>, оно будет использовано как обложка карточки. Режим удобен для визуального просмотра библиотеки спрайтов, иконок предметов или персонажей.</span>
+                <span lang="en"> Items are shown as visual preview cards. If the category has an <code>Image</code> or <code>Atlas</code> field, it is used as the card thumbnail. Ideal for visually browsing sprite libraries, item icons, or characters.</span>
+              </li>
+            </ul>
+            <figure class="doc-image">
+              <img src="images/view_mode_toggle.png" alt="Table / Gallery view mode toggle">
+              <figcaption>
+                <span lang="ru">Переключатель Table / Gallery</span>
+                <span lang="en">Table / Gallery view mode toggle</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- DOC SECTION: App Settings -->
+          <div id="doc-app-settings" class="doc-section">
+            <h2>
+              <span lang="ru">Настройки Приложения</span>
+              <span lang="en">App Settings</span>
+            </h2>
+            <p lang="ru">Панель настроек приложения открывается кнопкой <strong>⚙ Settings</strong> в правой части верхнего хедера. Здесь настраиваются глобальные параметры — внешний вид, автосохранение, плагины и языки. Настройки сохраняются и остаются после перезапуска приложения.</p>
+            <p lang="en">The application settings panel is opened via the <strong>⚙ Settings</strong> button in the top right header. Configure global appearance, autosave, plugins, and languages here. Settings are saved and persist across app restarts.</p>
+
+            <figure class="doc-image">
+              <img src="images/app_settings_panel.png" alt="Application settings panel">
+              <figcaption>
+                <span lang="ru">Панель настроек приложения</span>
+                <span lang="en">Application settings panel</span>
+              </figcaption>
+            </figure>
+
+            <h3>
+              <span lang="ru">Название Проекта</span>
+              <span lang="en">Project Name</span>
+            </h3>
+            <p lang="ru">Название проекта отображается в левой части верхнего хедера приложения жирным шрифтом. По умолчанию используется имя файла <code>.json</code> без расширения. Если проект ещё не сохранён — отображается «Untitled». Рядом с названием появляется символ <strong>*</strong> (звёздочка), если в проекте есть несохранённые изменения.</p>
+            <p lang="en">The project name is shown in bold in the left part of the top application header. By default it uses the <code>.json</code> filename without extension. If the project hasn't been saved yet, it displays «Untitled». An asterisk <strong>*</strong> appears next to the name when there are unsaved changes.</p>
+            <ul>
+              <li>
+                <strong lang="ru">Переименование двойным кликом:</strong><strong lang="en">Rename by Double-Clicking:</strong>
+                <span lang="ru"> Дважды щёлкните по названию проекта в хедере — оно превратится в поле ввода. Введите новое имя и нажмите <kbd>Enter</kbd> (или кликните за пределами поля), чтобы сохранить. DataForge также переименует файл проекта на диске, если он уже был сохранён.</span>
+                <span lang="en"> Double-click the project name in the header — it turns into an editable text input. Type the new name and press <kbd>Enter</kbd> (or click outside the field) to confirm. DataForge will also rename the project file on disk if the file has already been saved.</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span lang="ru">Темы Оформления (Themes)</span>
+              <span lang="en">Color Themes</span>
+            </h3>
+            <p lang="ru">DataForge поставляется с четырьмя встроенными темами. Выбранная тема немедленно применяется без перезапуска.</p>
+            <p lang="en">DataForge ships with four built-in color themes. The selected theme is applied immediately without restart.</p>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th><span lang="ru">Тема</span><span lang="en">Theme</span></th>
+                    <th><span lang="ru">Описание</span><span lang="en">Description</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Dark</strong></td>
+                    <td><span lang="ru">Тёмная тема по умолчанию. Нейтральные тёмно-серые тона, идеальна для длительной работы.</span><span lang="en">Default dark theme. Neutral dark grays, ideal for extended work sessions.</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Light</strong></td>
+                    <td><span lang="ru">Светлая тема на светлом фоне. Хорошо читается при ярком внешнем освещении.</span><span lang="en">Light-mode theme with white/gray background. Good readability in bright environments.</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dracula</strong></td>
+                    <td><span lang="ru">Популярная тёмная тема с фиолетово-розовой акцентировкой. Вдохновлена редактором Dracula.</span><span lang="en">Popular dark theme with purple-pink accents. Inspired by the Dracula editor palette.</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Monokai</strong></td>
+                    <td><span lang="ru">Тёплая тёмная тема с зелёно-жёлтыми акцентами. Вдохновлена цветовой схемой Monokai.</span><span lang="en">Warm dark theme with green-yellow highlights. Inspired by the Monokai color scheme.</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>
+              <span lang="ru">Автосохранение (Autosave)</span>
+              <span lang="en">Autosave</span>
+            </h3>
+            <ul>
+              <li>
+                <strong lang="ru">Включение / Выключение:</strong><strong lang="en">Enable / Disable:</strong>
+                <span lang="ru"> Флаг <code>Enable Autosave</code> включает периодическое автоматическое сохранение проекта в фоне. Это защищает от потери несохранённых изменений при сбое или случайном закрытии окна.</span>
+                <span lang="en"> The <code>Enable Autosave</code> flag enables periodic automatic background saving of the project. This protects against losing unsaved changes on crash or accidental window close.</span>
+              </li>
+              <li>
+                <strong lang="ru">Интервал (Autosave Interval):</strong><strong lang="en">Interval (Autosave Interval):</strong>
+                <span lang="ru"> Числовое поле задаёт частоту автосохранения в секундах (например, 30 — каждые 30 секунд). Значение по умолчанию: <code>30 секунд</code>.</span>
+                <span lang="en"> Numeric field sets the autosave frequency in seconds (e.g. 30 = every 30 seconds). Default value: <code>30 seconds</code>.</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span lang="ru">Языки Проекта (Project Languages)</span>
+              <span lang="en">Project Languages</span>
+            </h3>
+            <p lang="ru">В настройках проекта можно добавлять и удалять языковые коды (например, <code>ru</code>, <code>en</code>, <code>de</code>, <code>zh</code>). Список языков определяет, какие ключи перевода будут генерироваться для полей типа <code>Localized</code>.</p>
+            <p lang="en">In project settings you can add and remove language codes (e.g. <code>ru</code>, <code>en</code>, <code>de</code>, <code>zh</code>). The language list determines which translation keys are generated for <code>Localized</code> string fields.</p>
+            <ul>
+              <li>
+                <strong lang="ru">Активный язык редактирования:</strong><strong lang="en">Active Editing Language:</strong>
+                <span lang="ru"> В верхней панели редактора данных имеется выпадающий список для выбора активного языка. При переключении языка все <code>Localized</code>-поля в открытой карточке элемента автоматически переключаются на ввод текста для выбранного языка. Например, переключившись на <code>ru</code>, вы вводите русские переводы; переключившись на <code>en</code> — английские.</span>
+                <span lang="en"> The data editor top bar contains a language selector dropdown. Switching the active language causes all <code>Localized</code> fields in the current item card to immediately switch to editing the text for that language. For example, switching to <code>ru</code> enters Russian translations; switching to <code>en</code> enters English ones.</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span lang="ru">Директория Плагинов (Plugins Directory)</span>
+              <span lang="en">Plugins Directory</span>
+            </h3>
+            <p lang="ru">В настройках указывается путь к папке на диске, в которой DataForge ищет файлы плагинов (<code>.js</code>). Приложение автоматически сканирует директорию при запуске и загружает все обнаруженные плагины. Также можно отключать конкретные плагины через список <code>Disabled Plugins</code>.</p>
+            <p lang="en">In settings, specify a folder path where DataForge scans for plugin files (<code>.js</code>). The app automatically scans the directory on startup and loads all discovered plugins. Individual plugins can also be disabled via the <code>Disabled Plugins</code> list.</p>
           </div>
 
           <!-- DOC SECTION: Categories -->
+          <!-- DOC SECTION: Categories -->
           <div id="doc-categories" class="doc-section">
             <h2>
-              <span lang="ru">Категории и Наследование</span>
-              <span lang="en">Categories & Inheritance</span>
+              <span lang="ru">Категории и Структура</span>
+              <span lang="en">Categories & Schema</span>
             </h2>
-            <p lang="ru">Создание любой базы данных в DataForge начинается с <strong>Категорий (Categories)</strong>. Каждая категория представляет собой описание структуры таблицы однородных объектов (например, «Оружие», «Квесты» или «Характеристики персонажей»).</p>
-            <p lang="en">Building any database in DataForge starts with **Categories**. Each category describes the data structure schema of similar entities (e.g., "Weapons", "Quests", or "Character Stats").</p>
+            <p lang="ru">Проектирование любой базы данных в DataForge начинается с создания <strong>Категорий (Categories)</strong>. Каждая категория представляет собой строгое описание схемы данных (структуры полей) для объектов одного типа. Это можно представить как класс в программировании или таблицу с колонками в классических базах данных.</p>
+            <p lang="en">Designing any database in DataForge starts with creating **Categories**. Each category represents a strict data schema definition (field structures) for items of a certain type. You can think of it as a class in object-oriented programming or a table with columns in database software.</p>
+
+            <figure class="doc-image">
+              <img src="images/category_settings.png" alt="Category Schema Settings Window">
+              <figcaption>
+                <span lang="ru">Настройка структуры категории</span>
+                <span lang="en">Category Schema Settings Window</span>
+              </figcaption>
+            </figure>
 
             <h3>
               <span lang="ru">Создание Категории</span>
               <span lang="en">Creating a Category</span>
             </h3>
-            <p lang="ru">В левой панели приложения найдите кнопку <strong><code>+</code></strong> рядом с заголовком категорий. В модальном окне укажите следующие параметры:</p>
-            <p lang="en">In the left sidebar of the application, click the <strong><code>+</code></strong> button next to the categories header. In the modal dialog, configure the following properties:</p>
+            <p lang="ru">В левой панели приложения рядом с заголовком "Categories" найдите кнопку <strong><code>+</code></strong>. В открывшемся модальном окне настройте следующие свойства:</p>
+            <p lang="en">In the left sidebar, click the <strong><code>+</code></strong> button next to the "Categories" header. In the popup creation modal, configure these options:</p>
             <ul>
               <li>
                 <strong lang="ru">ID:</strong><strong lang="en">ID:</strong>
-                <span lang="ru"> Уникальный системный идентификатор (например, <code>weapons</code>). Используется в качестве ключа при экспорте. Допускаются только латинские буквы, цифры и знаки подчеркивания.</span>
-                <span lang="en"> Unique system identifier (e.g., <code>weapons</code>). Used as the main key during export. Only alphanumeric characters and underscores are allowed.</span>
+                <span lang="ru"> Системный текстовый ключ категории (например, <code>melee_weapons</code>). Используется как имя ключа при экспорте. Разрешены только латинские буквы, цифры и знаки подчеркивания.</span>
+                <span lang="en"> System-wide key for the category (e.g., <code>melee_weapons</code>). Used as the key name during data exports. Only letters, numbers, and underscores are allowed.</span>
               </li>
               <li>
                 <strong lang="ru">Name:</strong><strong lang="en">Name:</strong>
-                <span lang="ru"> Отображаемое имя категории в интерфейсе редактора (например, "Холодное оружие").</span>
-                <span lang="en"> Human-readable category title displayed in the editor UI (e.g., "Melee Weapons").</span>
+                <span lang="ru"> Отображаемое в интерфейсе понятное имя (например, "Холодное оружие").</span>
+                <span lang="en"> Human-readable title displayed in the editor (e.g., "Melee Weapons").</span>
               </li>
               <li>
                 <strong lang="ru">Родительская категория (Parent Category):</strong><strong lang="en">Parent Category:</strong>
-                <span lang="ru"> Позволяет указать существующую категорию в качестве родителя, выстраивая иерархическое дерево данных.</span>
-                <span lang="en"> Allows selecting an existing category as a parent, building a hierarchical structure tree.</span>
+                <span lang="ru"> Выбор базовой категории для выстраивания иерархии наследования. Если не указана, категория считается корневой.</span>
+                <span lang="en"> Select a base category to establish an inheritance hierarchy. If left empty, this category acts as a root.</span>
               </li>
             </ul>
 
             <h3>
-              <span lang="ru">Наследование Полей и Макетов</span>
-              <span lang="en">Fields & Layout Inheritance</span>
+              <span lang="ru">Редактирование параметров категории (Двойной Клик)</span>
+              <span lang="en">Editing Category Details (Double-Click Action)</span>
             </h3>
-            <p lang="ru">В DataForge реализована мощная система наследования структуры данных, избавляющая от повторного ручного описания схем:</p>
-            <p lang="en">DataForge features a robust schema inheritance system, saving developers from manually recreating schemas for similar entities:</p>
+            <p lang="ru">В DataForge вы можете быстро изменить метаданные категории прямо в рабочей области, не открывая дополнительные меню. Для этого перейдите в нужную категорию и совершите <strong>двойной клик левой кнопкой мыши по её заголовку</strong> в верхней части экрана. Откроется специальная панель редактирования:</p>
+            <p lang="en">In DataForge, you can quickly modify category settings on-the-fly without diving into separate menus. Select a category and <strong>double-click its header title</strong> at the top of the main viewport. This opens an inline customization bar:</p>
+
+            <figure class="doc-image">
+              <img src="images/category_inline_edit.png" alt="Category inline editing (Double-click activation)">
+              <figcaption>
+                <span lang="ru">Быстрое редактирование категории (Двойной клик)</span>
+                <span lang="en">Category inline editing (Double-click activation)</span>
+              </figcaption>
+            </figure>
+
             <ul>
               <li>
-                <strong lang="ru">Наследование структуры (Fields Inheritance):</strong>
-                <strong lang="en">Fields Inheritance:</strong>
-                <span lang="ru"> При включенном переключателе <code>inheritFields</code> в настройках категории, дочерняя таблица автоматически получает все поля своей родительской категории (и её предков выше по иерархии).</span>
-                <span lang="en"> When the <code>inheritFields</code> toggle is enabled in category settings, the child table automatically inherits all fields from its parent category (and its ancestors up the hierarchy tree).</span>
+                <strong lang="ru">Изменение Имени и ID:</strong><strong lang="en">Renaming Name & ID:</strong>
+                <span lang="ru"> Вы можете отредактировать отображаемое имя (Title) и внутренний системный ID. Изменения ID автоматически применятся ко всем унаследованным связям.</span>
+                <span lang="en"> Change the displayed title or raw system ID. Updates to the ID will cascade down to any inherited links.</span>
               </li>
               <li>
-                <strong lang="ru">Переопределение свойств полей (Overrides):</strong>
-                <strong lang="en">Property Overrides:</strong>
-                <span lang="ru"> Дочерняя категория может переопределить настройки унаследованного поля (например, изменить тип, регулярное выражение или границы чисел), просто создав поле с тем же ID.</span>
-                <span lang="en"> A child category can override properties of any inherited field (e.g., changing the type, regex constraints, or number bounds) simply by creating a field with the exact same ID.</span>
+                <strong lang="ru">Выбор цвета категории (Color Picker):</strong><strong lang="en">Color Customization (Color Picker):</strong>
+                <span lang="ru"> С помощью интерактивной палитры выберите уникальный цвет для категории. Этим цветом будет окрашена иконка категории в дереве проводника, что упрощает визуальное ориентирование в больших проектах.</span>
+                <span lang="en"> Select a custom color via the interactive color picker. This color applies to the category icon in the sidebar explorer tree, making it easy to identify key folders in large databases.</span>
               </li>
               <li>
-                <strong lang="ru">Наследование макетов (Layout Fallback):</strong>
-                <strong lang="en">Layout Fallback:</strong>
-                <span lang="ru"> Если в дочерней категории не настроена вкладка визуального макета <strong>Layout</strong>, редактор автоматически использует макет родительской категории для отрисовки карточек элементов.</span>
-                <span lang="en"> If a child category does not define its own visual form layout on the **Layout** tab, the editor automatically inherits the layout template of its parent category.</span>
+                <strong lang="ru">Выбор иконки (Icon List):</strong><strong lang="en">Selecting Custom Icon (Icon List):</strong>
+                <span lang="ru"> Под полями ввода расположена лента предустановленных иконок (Folder, Database, Shield, Sword, Heart, Star, Sparkles и др.). Кликните по иконке, чтобы применить её к категории.</span>
+                <span lang="en"> Below the inputs, select from a collection of preset icons (Folder, Database, Shield, Sword, Heart, Star, Sparkles, and more). Click an icon to apply it instantly.</span>
+              </li>
+              <li>
+                <strong lang="ru">Сохранение или Отмена:</strong><strong lang="en">Save or Cancel:</strong>
+                <span lang="ru"> Нажмите клавишу <strong>Enter</strong> или зеленую кнопку "OK" для сохранения изменений. Нажмите клавишу <strong>Escape</strong> для отмены редактирования и возврата в исходное состояние. Панель также автоматически закроется с сохранением изменений, если кликнуть в любую другую часть рабочей области (фокус размоется).</span>
+                <span lang="en"> Press <strong>Enter</strong> or click the green "OK" button to apply modifications. Press <strong>Escape</strong> to cancel. The editor will also auto-save and close if you click anywhere else in the workspace (loss of focus).</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span lang="ru">Наследование полей и макетов</span>
+              <span lang="en">Fields & Layouts Inheritance</span>
+            </h3>
+            <p lang="ru">Для предотвращения дублирования структуры данных DataForge использует иерархическое наследование:</p>
+            <p lang="en">To enforce data consistency and eliminate redundant schema creation, DataForge utilizes a cascading inheritance model:</p>
+            <ul>
+              <li>
+                <strong lang="ru">Наследование полей (Fields Inheritance):</strong><strong lang="en">Fields Inheritance:</strong>
+                <span lang="ru"> Если активирован флаг <code>inheritFields</code>, дочерняя категория автоматически получает все поля родителя. Унаследованные поля помечаются серым цветом в списке структуры полей.</span>
+                <span lang="en"> When the <code>inheritFields</code> flag is checked, the child category automatically receives all fields defined in the parent. Inherited fields are greyed out in the field schema editor.</span>
+              </li>
+              <li>
+                <strong lang="ru">Переопределение настроек (Overrides):</strong><strong lang="en">Property Overrides:</strong>
+                <span lang="ru"> Если в дочерней категории требуется переопределить свойства поля (например, сделать его обязательным или изменить шаг чисел), просто создайте новое поле с тем же <strong>ID</strong>. Оно заменит родительские настройки для данной ветки категорий.</span>
+                <span lang="en"> If a child category needs to modify field rules (e.g., making it required or changing decimal limits), create a new field with the exact same <strong>ID</strong>. It overrides parent parameters for this branch.</span>
+              </li>
+              <li>
+                <strong lang="ru">Резервный макет (Layout Fallback):</strong><strong lang="en">Layout Fallback:</strong>
+                <span lang="ru"> Если у дочерней категории не настроена вкладка <strong>Layout</strong>, редактор автоматически отрисует карточки элементов, используя макет родительской категории. Это позволяет настроить форму один раз для корневой категории и использовать её для десятков дочерних.</span>
+                <span lang="en"> If a child category does not specify form templates in its **Layout** tab, the editor automatically draws its items using the parent category's layout. This lets you design a form once at root level and reuse it across dozens of children.</span>
+              </li>
+            </ul>
+          <h3>
+              <span lang="ru">Иерархия Категорий и Наследование Полей</span>
+              <span lang="en">Category Hierarchy & Field Inheritance</span>
+            </h3>
+            <p lang="ru">DataForge поддерживает многоуровневую иерархию категорий. Любая категория может быть вложена в другую, создавая дерево подкатегорий в левой панели.</p>
+            <p lang="en">DataForge supports multi-level category hierarchies. Any category can be nested under another, creating a tree of sub-categories in the left sidebar.</p>
+            <ul>
+              <li>
+                <strong lang="ru">Создание подкатегории:</strong><strong lang="en">Creating Subcategory:</strong>
+                <span lang="ru"> Нажмите кнопку <code>+</code> рядом с именем родительской категории в боковой панели. Появится диалог создания — новая категория автоматически будет вложена как дочерняя.</span>
+                <span lang="en"> Click the <code>+</code> button next to the parent category name in the sidebar. The creation dialog will appear — the new category is automatically set as a child.</span>
+              </li>
+              <li>
+                <strong lang="ru">Наследование Полей (Inherit Fields):</strong><strong lang="en">Inherit Fields:</strong>
+                <span lang="ru"> По умолчанию дочерняя категория автоматически получает все поля родительской. Например, если категория "Оружие" содержит поля <code>damage</code>, <code>weight</code>, <code>rarity</code>, то подкатегория "Двуручное Оружие" унаследует их все автоматически и может добавить только свои уникальные поля. Флаг <code>Inherit Fields</code> в настройках дочерней категории позволяет отключить наследование при необходимости.</span>
+                <span lang="en"> By default, a child category automatically receives all fields from its parent. For example, if "Weapons" has <code>damage</code>, <code>weight</code>, <code>rarity</code> fields, the "Two-Handed Weapons" subcategory inherits them all automatically and only needs to add its own unique fields. The <code>Inherit Fields</code> checkbox in the child category settings allows disabling inheritance.</span>
+              </li>
+              <li>
+                <strong lang="ru">Перетаскивание категорий:</strong><strong lang="en">Drag-and-Drop Reordering:</strong>
+                <span lang="ru"> Категории можно перетаскивать в боковой панели, изменяя их порядок и вложенность. Зажмите и потяните категорию за её имя — синяя полоса-индикатор покажет целевое положение.</span>
+                <span lang="en"> Categories can be drag-and-dropped in the sidebar to reorder or re-nest them. Grab and drag a category by its name — a blue drop indicator line shows the target position.</span>
+              </li>
+            </ul>
+
+            <figure class="doc-image">
+              <img src="images/category_hierarchy.png" alt="Category hierarchy tree in the sidebar">
+              <figcaption>
+                <span lang="ru">Иерархия категорий в боковой панели</span>
+                <span lang="en">Category hierarchy tree in the sidebar</span>
+              </figcaption>
+            </figure>
+
+            <h3>
+              <span lang="ru">Аннотации и Настройки Экспорта Категории</span>
+              <span lang="en">Category Export & Annotation Settings</span>
+            </h3>
+            <p lang="ru">В нижней части вкладки настроек каждой категории находится блок <strong>Export &amp; Annotation Settings</strong>, который управляет тем, как данные категории сериализуются при экспорте:</p>
+            <p lang="en">At the bottom of each category's settings tab is the <strong>Export &amp; Annotation Settings</strong> block, which controls how the category data is serialized on export:</p>
+            <ul>
+              <li>
+                <strong lang="ru">Custom Annotation Class Name:</strong><strong lang="en">Custom Annotation Class Name:</strong>
+                <span lang="ru"> Позволяет задать кастомное имя класса Lua-аннотации (например, <code>WeaponItem</code> вместо автоматически сгенерированного). Используется при экспорте с включённым флагом Annotations для генерации правильных <code>---@class WeaponItem</code> и <code>---@field</code> записей в Lua LSP-файле.</span>
+                <span lang="en"> Sets a custom Lua annotation class name (e.g. <code>WeaponItem</code> instead of the auto-generated name). Used when exporting with Annotations enabled to produce correct <code>---@class WeaponItem</code> and <code>---@field</code> entries in the Lua LSP file.</span>
+              </li>
+              <li>
+                <strong lang="ru">Export Type (Array / Map):</strong><strong lang="en">Export Type (Array / Map):</strong>
+                <span lang="ru"> Определяет формат корневого контейнера данных при экспорте этой категории: <code>Array</code> — элементы экспортируются в виде массива (<code>[{...}, {...}]</code>); <code>Map</code> — элементы экспортируются в виде словаря, где ключами являются ID элементов (<code>{"weapon_01": {...}, "weapon_02": {...}}</code>).</span>
+                <span lang="en"> Determines the root container format when exporting this category: <code>Array</code> — items are serialized as an array (<code>[{...}, {...}]</code>); <code>Map</code> — items are serialized as a dictionary with item IDs as keys (<code>{"weapon_01": {...}}</code>).</span>
               </li>
             </ul>
           </div>
@@ -551,15 +880,25 @@
           <!-- DOC SECTION: Fields -->
           <div id="doc-fields" class="doc-section">
             <h2>
-              <span lang="ru">Поля, Валидация и Наследование Значений</span>
-              <span lang="en">Fields, Validation & Value Inheritance</span>
+              <span lang="ru">Поля и Валидация</span>
+              <span lang="en">Fields & Validation</span>
             </h2>
-            <p lang="ru">Поля (Fields) определяют схему данных объектов внутри выбранной категории. Каждое поле имеет уникальный ID, отображаемое имя и тип данных.</p>
-            <p lang="en">Fields define the data schema of items inside the selected category. Each field has a unique ID, label name, and data type.</p>
-            
+            <p lang="ru">Схема полей категории определяет набор атрибутов, которыми будут обладать элементы. Каждое поле имеет уникальный текстовый системный идентификатор (ID), отображаемое имя (Name), тип данных и набор параметров валидации.</p>
+            <p lang="en">The category fields schema defines the set of attributes that item records will possess. Each field has a unique text-based system ID, display label (Name), data type, and validation rules.</p>
+            <p lang="ru">Для добавления нового поля откройте вкладку настроек структуры категории. В нижней части панели находится строка <strong>«Add field:»</strong>, рядом с которой расположены кнопки-иконки для каждого типа поля — одна кнопка на тип (<code>String</code>, <code>Number</code>, <code>Boolean</code>, <code>Color</code> и т.д.). Нажмите нужную иконку — поле этого типа будет добавлено мгновенно с автоматически сгенерированным именем, а затем сразу откроется модальное окно его настроек для дальнейшей конфигурации.</p>
+            <p lang="en">To add a new field, open the category structure settings tab. At the bottom of the panel is a row labelled <strong>«Add field:»</strong> followed by a series of small icon buttons — one per field type (<code>String</code>, <code>Number</code>, <code>Boolean</code>, <code>Color</code>, etc.). Click the icon for the type you need — the field is instantly created with an auto-generated name, and its settings modal opens immediately for further configuration.</p>
+
+            <figure class="doc-image">
+              <img src="images/field_creation.png" alt="Field creation and configuration dialog">
+              <figcaption>
+                <span lang="ru">Окно добавления и настройки поля</span>
+                <span lang="en">Field creation and configuration dialog</span>
+              </figcaption>
+            </figure>
+
             <h3>
-              <span lang="ru">Доступные типы данных (10 типов полей):</span>
-              <span lang="en">Available Data Types (10 Native Fields):</span>
+              <span lang="ru">Доступные типы данных (12 встроенных типов):</span>
+              <span lang="en">Available Data Types (12 Native Types):</span>
             </h3>
             <div class="table-responsive">
               <table>
@@ -567,136 +906,175 @@
                   <tr>
                     <th><span lang="ru">Тип</span><span lang="en">Type</span></th>
                     <th><span lang="ru">Описание</span><span lang="en">Description</span></th>
-                    <th><span lang="ru">Пример использования</span><span lang="en">Example Usage</span></th>
+                    <th><span lang="ru">Параметры и Применение</span><span lang="en">Options & Use Cases</span></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td><code>String</code></td>
                     <td><span lang="ru">Текстовая строка</span><span lang="en">Text string</span></td>
-                    <td><span lang="ru">Имя персонажа, описание предмета</span><span lang="en">Character name, item description</span></td>
+                    <td><span lang="ru">Имена персонажей, описания, диалоги. Поддерживает локализацию.</span><span lang="en">Character names, description text, dialogue transcripts. Supports localization.</span></td>
                   </tr>
                   <tr>
                     <td><code>Number</code></td>
-                    <td><span lang="ru">Число (целое или с плавающей точкой)</span><span lang="en">Number (integer or float)</span></td>
-                    <td><span lang="ru">Запас здоровья, множитель урона</span><span lang="en">Health pool, damage multiplier</span></td>
+                    <td><span lang="ru">Число (целое или вещественное)</span><span lang="en">Number (integer or float)</span></td>
+                    <td><span lang="ru">Урон, очки здоровья, вес, шанс выпадения предмета.</span><span lang="en">Damage, hit points, weight, item drop rates.</span></td>
                   </tr>
                   <tr>
                     <td><code>Boolean</code></td>
-                    <td><span lang="ru">Логический переключатель (Да/Нет)</span><span lang="en">Boolean switch (Yes/No)</span></td>
-                    <td><span lang="ru">Является ли предмет квестовым</span><span lang="en">Whether an item is a quest item</span></td>
+                    <td><span lang="ru">Логическое значение (Да/Нет)</span><span lang="en">Boolean (Yes/No toggle)</span></td>
+                    <td><span lang="ru">Флаги: "is_quest_item" (является ли квестовым), "can_stack" (стакается ли).</span><span lang="en">Flags: "is_quest_item" (whether quest element), "can_stack" (stackable).</span></td>
                   </tr>
                   <tr>
                     <td><code>Color</code></td>
-                    <td><span lang="ru">Цвет в HEX / RGBA формате с палитрой</span><span lang="en">HEX/RGBA color with interactive palette</span></td>
-                    <td><span lang="ru">Цвет свечения эффекта, цвет редкости</span><span lang="en">Effect glow color, item rarity color</span></td>
+                    <td><span lang="ru">Выбор цвета (HEX/RGBA)</span><span lang="en">Color Picker (HEX/RGBA)</span></td>
+                    <td><span lang="ru">Свечение эффектов частиц, цвет редкости предмета, цвета HUD.</span><span lang="en">Particle glow light tint, item rarity frame color, HUD color tags.</span></td>
                   </tr>
                   <tr>
                     <td><code>Reference</code></td>
-                    <td><span lang="ru">Ссылка на элемент из другой категории</span><span lang="en">Link reference to an item from another category</span></td>
-                    <td><span lang="ru">Ссылка на стартовое оружие у класса персонажа</span><span lang="en">Start weapon of a character class</span></td>
+                    <td><span lang="ru">Ссылка на элемент другой категории</span><span lang="en">Reference to another item</span></td>
+                    <td><span lang="ru">Связи сущностей: персонаж ссылается на категорию оружия.</span><span lang="en">Relations: a character profile pointing to a starter weapon item.</span></td>
                   </tr>
                   <tr>
                     <td><code>Dropdown</code></td>
-                    <td><span lang="ru">Выбор одного значения из списка опций</span><span lang="en">Choose a single option from a list of strings</span></td>
-                    <td><span lang="ru">Тип урона: Fire, Cold, Poison, Physical</span><span lang="en">Damage type: Fire, Cold, Poison, Physical</span></td>
+                    <td><span lang="ru">Выпадающий список опций</span><span lang="en">Static dropdown selection</span></td>
+                    <td><span lang="ru">Фиксированные перечисления: типы брони (Light, Medium, Heavy).</span><span lang="en">Fixed enumerations: armor weight class (Light, Medium, Heavy).</span></td>
                   </tr>
                   <tr>
                     <td><code>Filepath</code></td>
-                    <td><span lang="ru">Абсолютный или относительный путь к файлу</span><span lang="en">Absolute or relative filesystem path</span></td>
-                    <td><span lang="ru">Путь к файлу скрипта поведения или звука</span><span lang="en">Path to AI behavior script or sound asset file</span></td>
+                    <td><span lang="ru">Путь к файлу на диске</span><span lang="en">OS Filesystem path</span></td>
+                    <td><span lang="ru">Пути к внешним lua-скриптам ИИ, файлам звуков или шейдерам.</span><span lang="en">Paths to external AI Lua scripts, audio sound files, or shaders.</span></td>
                   </tr>
                   <tr>
                     <td><code>Image</code></td>
-                    <td><span lang="ru">Путь к изображению с предпросмотром в UI</span><span lang="en">Path to image asset with visual thumbnail preview</span></td>
-                    <td><span lang="ru">Иконка предмета, портрет персонажа</span><span lang="en">Item icon, character avatar</span></td>
+                    <td><span lang="ru">Путь к картинке с миниатюрой</span><span lang="en">Image path with thumbnail</span></td>
+                    <td><span lang="ru">Иконки инвентаря, портреты персонажей. См. раздел о растягивании.</span><span lang="en">Inventory icons, character portraits. See scaling details below.</span></td>
                   </tr>
                   <tr>
                     <td><code>Collection</code></td>
-                    <td><span lang="ru">Список (массив) значений одного типа</span><span lang="en">Dynamic list array of values of the same type</span></td>
-                    <td><span lang="ru">Список предметов в сундуке, требования квеста</span><span lang="en">Items inside a lootbox chest, quest requirements</span></td>
+                    <td><span lang="ru">Массив значений одного типа</span><span lang="en">Dynamic array collection</span></td>
+                    <td><span lang="ru">Списки: лут-таблицы (массив References), массивы чисел (координаты).</span><span lang="en">Lists: chest drop tables (array of References), floats array.</span></td>
                   </tr>
                   <tr>
                     <td><code>Custom</code></td>
-                    <td><span lang="ru">Пользовательский тип, управляемый плагинами</span><span lang="en">Custom field type registered and handled by plugins</span></td>
-                    <td><span lang="ru">Слайдер диапазона, выбор даты, таблица формул</span><span lang="en">Range slider, date picker, custom formula table</span></td>
+                    <td><span lang="ru">Сложная структура (Custom Type)</span><span lang="en">Custom Type structure</span></td>
+                    <td><span lang="ru">Сложные вложенные структуры (например, Vector3, Stats).</span><span lang="en">Nested struct variables (e.g. Vector3 coordinates, Stat blocks).</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>Formula</code></td>
+                    <td><span lang="ru">Вычисляемое математическое выражение</span><span lang="en">Mathematical formula field</span></td>
+                    <td><span lang="ru">Динамический расчет: DPS (dps = damage * speed) на основе других ячеек.</span><span lang="en">Calculates properties dynamically on-the-fly based on other cells.</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>Atlas</code></td>
+                    <td><span lang="ru">Связь со спрайт-листом (атласом)</span><span lang="en">Atlas Sprite link</span></td>
+                    <td><span lang="ru">Выбор кадра анимации или спрайта из игровых атласов.</span><span lang="en">Select frame coordinate animations from game texture atlases.</span></td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <div class="tip-box">
-              <strong lang="ru">💡 Умные связи:</strong>
-              <strong lang="en">💡 Smart References:</strong>
-              <span lang="ru">При создании поля типа <code>Reference</code> вы можете выбрать целевую категорию. В интерфейсе редактирования элементов DataForge автоматически покажет выпадающий список со всеми элементами этой целевой категории.</span>
-              <span lang="en">When creating a <code>Reference</code> field, you can choose the target category. The editor will then automatically render a dropdown list of all elements from that target category.</span>
-            </div>
-
             <h3>
-              <span lang="ru">Настройки валидации и ограничений (Field Config)</span>
-              <span lang="en">Validation Constraints (Field Config)</span>
+              <span lang="ru">Настройки валидации полей (Validation Config)</span>
+              <span lang="en">Field Validation Rules (Validation Config)</span>
             </h3>
-            <p lang="ru">При добавлении или редактировании поля в схеме категории вы можете настроить параметры его валидации:</p>
-            <p lang="en">When creating or editing a field, you can configure several validation constraints and presentation options:</p>
+            <p lang="ru">Чтобы геймдизайнер не мог ввести некорректные данные, при добавлении поля настраиваются правила автоматической проверки:</p>
+            <p lang="en">To enforce data sanitization and prevent entry errors, configure these verification properties for each field:</p>
             <ul>
               <li>
-                <strong lang="ru">Обязательное (Required):</strong><strong lang="en">Required:</strong>
-                <span lang="ru"> Поле не может оставаться пустым при сохранении элемента.</span>
-                <span lang="en"> The field must be filled out before saving the item.</span>
+                <strong lang="ru">Required (Обязательное):</strong><strong lang="en">Required:</strong>
+                <span lang="ru"> Поле не должно оставаться пустым при сохранении элемента. Если значение не введено, DataForge выведет ошибку валидации.</span>
+                <span lang="en"> The field cannot be empty. If left empty, DataForge highlights it with a validation alert.</span>
               </li>
               <li>
-                <strong lang="ru">Уникальное (Unique):</strong><strong lang="en">Unique:</strong>
-                <span lang="ru"> Редактор проверяет уникальность значения этого поля во всех элементах категории, предотвращая дубликаты.</span>
-                <span lang="en"> The editor enforces value uniqueness across all items in this category to prevent duplicate values.</span>
+                <strong lang="ru">Unique (Уникальное):</strong><strong lang="en">Unique:</strong>
+                <span lang="ru"> Значение поля должно быть уникальным среди всех элементов в этой категории. Полезно для уникальных ключей локализации или баз предметов.</span>
+                <span lang="en"> Ensures the value does not duplicate across other records in this category. Crucial for localization keys.</span>
               </li>
               <li>
-                <strong lang="ru">Регулярное выражение (Regex):</strong><strong lang="en">Regex:</strong>
-                <span lang="ru"> Проверка текстовых строк на соответствие паттерну (например, маска артикула <code>^[A-Z]{3}-\d{4}$</code>).</span>
-                <span lang="en"> Evaluates text strings against a regular expression pattern (e.g. matching an item code like <code>^[A-Z]{3}-\d{4}$</code>).</span>
+                <strong lang="ru">Regex Pattern (Регулярное выражение):</strong><strong lang="en">Regex Pattern:</strong>
+                <span lang="ru"> Текстовая строка проверяется на соответствие шаблону (например, маска артикула оружия: <code>^WEAPON_[A-Z0-9_]+$</code>).</span>
+                <span lang="en"> Evaluates the text against a regex pattern (e.g. matching weapon item format: <code>^WEAPON_[A-Z0-9_]+$</code>).</span>
               </li>
               <li>
-                <strong lang="ru">Локализация (Localized):</strong><strong lang="en">Localized:</strong>
-                <span lang="ru"> Указывает, что поле предназначено для хранения языковых ключей (поддерживающих переводы).</span>
-                <span lang="en"> Indicates that the field values store translation keys supporting localizations.</span>
+                <strong lang="ru">Localized (Локализация):</strong><strong lang="en">Localized:</strong>
+                <span lang="ru"> Помечает поле как поддерживающее мультиязычные значения. В базе данных DataForge создаст отдельные ключи переводов (например, <code>{"ru": "Привет", "en": "Hello"}</code>). В инпуте будет отображаться языковой тег активного языка приложения (RU/EN).</span>
+                <span lang="en"> Flags the field as translating. DataForge handles language sub-keys in the database output (e.g., <code>{"ru": "Привет", "en": "Hello"}</code>). The input displays the active language tag code (RU/EN).</span>
               </li>
               <li>
-                <strong lang="ru">Многострочность (Multiline):</strong><strong lang="en">Multiline:</strong>
-                <span lang="ru"> Отображает многострочное поле ввода (textarea) вместо одной текстовой строки.</span>
-                <span lang="en"> Renders a multiline textarea input box instead of a single-line input.</span>
+                <strong lang="ru">Multiline (Многострочное):</strong><strong lang="en">Multiline:</strong>
+                <span lang="ru"> Вместо стандартной однострочной ячейки ввода рендерится текстовое поле <code>textarea</code>. Идеально для описаний предметов и реплик диалогов.</span>
+                <span lang="en"> Replaces the single line input cell with a large multiline textarea box. Ideal for dialogue nodes or long logs.</span>
               </li>
               <li>
-                <strong lang="ru">Отражать имя (Reflects Name):</strong><strong lang="en">Reflects Name:</strong>
-                <span lang="ru"> Значение этого строкового поля будет автоматически подставляться в качестве заголовка элемента в дереве сущностей (вместо технического ID элемента).</span>
-                <span lang="en"> Automatically sets the value of this string field as the display label of the item in the sidebar explorer tree (instead of displaying its raw technical ID).</span>
+                <strong lang="ru">Reflects Name (Отражать имя):</strong><strong lang="en">Reflects Name:</strong>
+                <span lang="ru"> При включении этого флага значение поля будет автоматически использоваться в боковом меню в качестве имени элемента (вместо его технического ID). Например, если ввести имя "Лук Молний" в поле `name`, то элемент в дереве сменит ID `bow_t3` на "Лук Молний".</span>
+                <span lang="en"> Uses this field's value as the item's label in the sidebar explorer tree (instead of displaying its raw technical ID). For example, typing "Lightning Bow" in this field will rename `bow_t3` to "Lightning Bow" in the tree view.</span>
               </li>
               <li>
-                <strong lang="ru">Границы диапазона (Min, Max, Step):</strong><strong lang="en">Number Bounds (Min, Max, Step):</strong>
-                <span lang="ru"> Для числового типа <code>Number</code> — задаёт границы ввода и шаг (например, шаг <code>0.1</code> для плавных значений или <code>1</code> для целых чисел).</span>
-                <span lang="en"> For the <code>Number</code> type, sets the input constraints and stepping value (e.g., step <code>0.1</code> for decimal fractions or <code>1</code> for integers).</span>
+                <strong lang="ru">Границы чисел (Min, Max, Step):</strong><strong lang="en">Numeric Bounds (Min, Max, Step):</strong>
+                <span lang="ru"> Для типа <code>Number</code> позволяет задать минимальное и максимальное значение, а также шаг приращения (например, <code>Step: 0.1</code> для плавных процентов урона или <code>Step: 1</code> для очков характеристик).</span>
+                <span lang="en"> Set value boundaries and step increments for the <code>Number</code> type (e.g., <code>Step: 0.1</code> for float percentage rates or <code>Step: 1</code> for static integer levels).</span>
               </li>
             </ul>
 
             <h3>
-              <span lang="ru">Наследование значений и переопределение (Система Замков)</span>
-              <span lang="en">Value Inheritance & Overrides (The Lock System)</span>
+              <span lang="ru">Продвинутые типы полей (Formula, Custom, Collections)</span>
+              <span lang="en">Advanced Fields (Formula, Custom, Collections)</span>
             </h3>
-            <p lang="ru">DataForge реализует гибкую систему наследования значений с помощью <strong>замков (Locks)</strong>:</p>
-            <p lang="en">DataForge features a default value inheritance scheme driven by interactive padlock status icons:</p>
             <ul>
               <li>
-                <strong lang="ru">Default Values:</strong><strong lang="en">Default Values:</strong>
-                <span lang="ru"> На уровне категории (вкладка <em>Default Values</em>) вы можете определить значения по умолчанию для всех полей.</span>
-                <span lang="en"> In category settings (Default Values tab), you can define default values for all category fields.</span>
+                <strong lang="ru">Вычисляемые формулы (Formula):</strong><strong lang="en">Calculated Formulas (Formula):</strong>
+                <span lang="ru"> Поля типа <code>Formula</code> позволяют вычислять математические выражения на лету. В настройках поля вы задаете формулу (например, <code>damage * attack_speed</code>). DataForge автоматически подставит значения соответствующих полей текущего элемента и произведет вычисления с использованием безопасного песочного интерпретатора. Результат отображается в карточке элемента в режиме "только для чтения".</span>
+                <span lang="en"> Fields of type <code>Formula</code> evaluate mathematical expressions on-the-fly. In the field options, define a string (e.g., <code>damage * attack_speed</code>). DataForge fetches the sibling field values of the item, runs safe evaluation, and displays the read-only calculated result in the card.</span>
               </li>
               <li>
-                <strong lang="ru">Открытый замок (Unlocked):</strong><strong lang="en">Unlocked (Default):</strong>
-                <span lang="ru"> По умолчанию все поля нового элемента наследуют дефолтные значения из категории. Если изменить значение по умолчанию в настройках категории, оно мгновенно обновится во всех элементах с открытым замком.</span>
-                <span lang="en"> All newly created items inherit the defaults defined in the category. If you change a category default, it instantly updates in all items with an Unlocked padlock.</span>
+                <strong lang="ru">Кастомные структуры (Custom Type):</strong><strong lang="en">Struct templates (Custom Type):</strong>
+                <span lang="ru"> Если вам нужно хранить вложенные структуры (например, параметры точки <code>x, y, z</code> или блок характеристик), вы можете создать шаблон структуры в глобальной вкладке настроек **Custom Types**. После этого добавьте поле типа <code>Custom</code> и укажите созданный тип в выпадающем списке <code>customTypeId</code>. В карточках элементов сгенерируется аккуратная вложенная группа полей.</span>
+                <span lang="en"> To manage nested attributes (such as 3D coordinates <code>x, y, z</code> or item stats), define a schema template under the global **Custom Types** settings tab. Then, add a field of type <code>Custom</code> and select the template in the <code>customTypeId</code> option. This renders a nested input sub-form inside items.</span>
               </li>
               <li>
-                <strong lang="ru">Закрытый замок (Locked / Override):</strong><strong lang="en">Locked (Override):</strong>
-                <span lang="ru"> Если изменить поле в конкретном элементе вручную, замок автоматически закрывается. Это означает, что локальное значение переопределено и изолировано от изменений дефолтных значений на уровне категории. Вы можете сбросить переопределение в любой момент, нажав на замок.</span>
-                <span lang="en"> Manually editing a field value in a specific item automatically clicks shut the padlock icon. This isolates the field value, preserving your custom edit from any future category-level default value updates. You can reset a value back to defaults at any time by clicking the padlock icon.</span>
+                <strong lang="ru">Фиксированные коллекции (Fixed-Size Collections):</strong><strong lang="en">Fixed-Size Collections:</strong>
+                <span lang="ru"> Для полей типа <code>Collection</code> доступен флаг <code>Fixed size</code>. Он позволяет жестко ограничить количество элементов в массиве (параметр <code>fixedSizeLength</code>). Это удобно для хранения статичных наборов данных, таких как координаты 2D-векторов (ровно 2 числа) или RGB-цвета (ровно 3 числа), отключая кнопки добавления и удаления ячеек.</span>
+                <span lang="en"> For <code>Collection</code> fields, check the <code>Fixed size</code> box to lock the array size (set by <code>fixedSizeLength</code>). This is ideal for static arrays like 2D vectors (exactly 2 numbers) or RGB floats (exactly 3 values), disabling manual append/delete buttons.</span>
+              </li>
+            </ul>
+
+            <h3>
+              <span lang="ru">Работа с Изображениями и Растягивание (Image Scaling & Resizing)</span>
+              <span lang="en">Working with Images (Image Scaling & Resizing)</span>
+            </h3>
+            <p lang="ru">Для полей типа <code>Image</code> в DataForge встроен удобный интерактивный механизм предварительного просмотра, который позволяет геймдизайнеру гибко настраивать отображение графических ресурсов прямо в карточке элемента:</p>
+            <p lang="en">For <code>Image</code> fields, DataForge includes an interactive preview container that lets game designers customize how graphic assets are displayed directly inside the item card:</p>
+
+            <figure class="doc-image">
+              <img src="images/image_resize_handle.png" alt="Interactive image preview resizing in the card editor">
+              <figcaption>
+                <span lang="ru">Интерфейс интерактивного изменения размеров изображения</span>
+                <span lang="en">Interactive image preview resizing in the card editor</span>
+              </figcaption>
+            </figure>
+
+            <ul>
+              <li>
+                <strong lang="ru">Растягивание и изменение размера превью (Resize Handle):</strong><strong lang="en">Resizing & Stretching Preview (Resize Handle):</strong>
+                <span lang="ru"> При наведении курсора мыши на правый нижний угол рамки изображения в карточке элемента появляется стандартный двухсторонний маркер изменения размера. Зажмите левую кнопку мыши и потяните, чтобы свободно растянуть или уменьшить контейнер превью. Заданный размер сохраняется и остаётся после перезапуска приложения.</span>
+                <span lang="en"> Hovering your mouse over the bottom-right corner of the image preview container reveals a resize handle. Click and drag it to freely stretch or shrink the preview frame. The chosen size is saved and persists across app restarts.</span>
+              </li>
+              <li>
+                <strong lang="ru">Заполнение контейнера (Fit Image):</strong><strong lang="en">Fit Image to Container:</strong>
+                <span lang="ru"> В настройках поля доступен флаг <code>Fit image to container</code>. При его включении изображение автоматически масштабируется, чтобы заполнить контейнер превью с сохранением пропорций, вместо отображения в оригинальном размере.</span>
+                <span lang="en"> In the field settings, toggle <code>Fit image to container</code>. When enabled, the image auto-scales to fill the preview frame while preserving its aspect ratio, instead of rendering at its natural size.</span>
+              </li>
+              <li>
+                <strong lang="ru">Отображение пиксель-арта (Pixel Art Rendering):</strong><strong lang="en">Pixel Art Rendering:</strong>
+                <span lang="ru"> Флаг <code>Pixel art rendering</code> включает режим масштабирования без размытия. Это важно для разработчиков 2D пиксельных игр — спрайты и иконки остаются чёткими и пикселизированными даже при сильном увеличении контейнера.</span>
+                <span lang="en"> The <code>Pixel art rendering</code> checkbox disables image smoothing on scaling. Essential for pixel art games — sprites and icons remain crisp and sharp when the preview is stretched, without blur.</span>
+              </li>
+              <li>
+                <strong lang="ru">Полнотекстовый путь (Show full path):</strong><strong lang="en">Show Full Image Path:</strong>
+                <span lang="ru"> В общих настройках проекта доступен переключатель <code>Show full image path</code>. При его активации прямо под областью предпросмотра изображения рендерится текстовое поле ввода. Это позволяет просмотреть точный путь к картинке на диске и отредактировать его вручную (например, прописать относительный путь к ресурсу).</span>
+                <span lang="en"> Toggling <code>Show full image path</code> in the project settings renders an editable text input directly underneath the image card box. This lets designers inspect or manually edit the relative path on disk (e.g. changing resource subfolders).</span>
               </li>
             </ul>
 
@@ -704,90 +1082,236 @@
               <span lang="ru">Связи между Категориями (Relations / References)</span>
               <span lang="en">Category Relationships (Relations & References)</span>
             </h3>
-            <p lang="ru">Связи (отношения) позволяют объединять разрозненные категории в единую структурированную базу данных. Они реализуются через специальный тип поля <code>Reference</code>.</p>
-            <p lang="en">Relations connect independent categories into a structured, unified database. They are established via the <code>Reference</code> field type.</p>
+            <p lang="ru">Поле типа <code>Reference</code> позволяет создавать ссылки между записями из разных таблиц:</p>
+            <p lang="en">The <code>Reference</code> field type allows setting up links between database records belonging to different tables:</p>
             <ul>
               <li>
-                <strong lang="ru">Настройка связи:</strong><strong lang="en">Relation Settings:</strong>
-                <span lang="ru"> При создании поля типа <code>Reference</code> в настройках схемы категории вы указываете целевую категорию (например, в свойствах персонажа поле <code>weapon_id</code> будет ссылаться на категорию <code>weapons</code>).</span>
-                <span lang="en"> When creating a <code>Reference</code> field, select the target category (e.g., in a character profile, a <code>weapon_id</code> field points to the <code>weapons</code> category).</span>
+                <strong lang="ru">Создание связи:</strong><strong lang="en">Establishing Link:</strong>
+                <span lang="ru"> В настройках поля выберите целевую категорию (Target Category). Например, для поля <code>starter_weapon</code> категории "Персонажи" выберите цель "Оружие".</span>
+                <span lang="en"> In the field options, select the Target Category. E.g., for the <code>starter_weapon</code> field of "Characters", select "Weapons".</span>
               </li>
               <li>
-                <strong lang="ru">Интерфейс заполнения:</strong><strong lang="en">Data Input UI:</strong>
-                <span lang="ru"> При редактировании элемента DataForge автоматически подгружает все элементы из целевой категории и отображает удобный выпадающий список. Вместо ручного ввода ID разработчик выбирает нужный элемент по его имени.</span>
-                <span lang="en"> While editing an item, DataForge automatically loads all items from the target category into a user-friendly dropdown. Game designers select items by their display name instead of typing technical IDs.</span>
+                <strong lang="ru">Интерфейс:</strong><strong lang="en">User Interface:</strong>
+                <span lang="ru"> В карточке элемента вместо ручного ввода ID появится удобный выпадающий список. DataForge просканирует целевую категорию и покажет все доступные элементы с их именами.</span>
+                <span lang="en"> When filling data, standard text cells are replaced by a search-friendly dropdown. DataForge fetches and lists items of the target category.</span>
               </li>
               <li>
-                <strong lang="ru">Типы связей:</strong><strong lang="en">Relation Types:</strong>
-                <ul>
-                  <li>
-                    <em lang="ru">Одиночная связь (One-to-One / One-to-Many):</em><em lang="en">Single Reference (One-to-One / One-to-Many):</em>
-                    <span lang="ru"> Обычное поле <code>Reference</code>, содержащее ссылку на один элемент. Например, класс персонажа указывает на свое стартовое снаряжение.</span>
-                    <span lang="en"> A regular reference field holding a single link, like a character pointing to their starting weapon.</span>
-                  </li>
-                  <li>
-                    <em lang="ru">Множественная связь (Many-to-Many):</em><em lang="en">Collection of References (Many-to-Many):</em>
-                    <span lang="ru"> Комбинация типов <code>Collection</code> и <code>Reference</code>. Позволяет хранить массив ссылок. Например, торговец ссылается на список товаров, которые он продает, или монстр содержит список активных умений (references на категорию умений).</span>
-                    <span lang="en"> A combination of <code>Collection</code> and <code>Reference</code> types. Allows storing an array of links (e.g., a shop merchant holding a list of references to sellable items, or a monster pointing to an array of active spells).</span>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong lang="ru">Целостность данных:</strong><strong lang="en">Data Integrity:</strong>
-                <span lang="ru"> При экспорте сохраняются только строковые идентификаторы (ID) связанных элементов, что делает итоговый JSON/CSV чистым, легким и готовым для ручной или автоматической сборки связей на стороне игрового движка.</span>
-                <span lang="en"> Only the string identifier (ID) of the linked entity is exported in the final JSON/CSV payload. This keeps the data payload lightweight and leaves connection resolving to the runtime game engine loader.</span>
+                <strong lang="ru">Связи Many-to-Many:</strong><strong lang="en">Many-to-Many Links:</strong>
+                <span lang="ru"> Если скомбинировать тип <code>Collection</code> и <code>Reference</code>, то получится массив ссылок. Например, поле <code>merchant_inventory</code> может содержать список предметов, продаваемых торговцем (массив ссылок на категорию предметов).</span>
+                <span lang="en"> Combining <code>Collection</code> and <code>Reference</code> types creates an array of references. For example, a <code>merchant_inventory</code> field holds a list of items sold by a shopkeeper.</span>
               </li>
             </ul>
-          </div>          <!-- DOC SECTION: Layouts -->
-          <div id="doc-layouts" class="doc-section">
+          <h3>
+              <span lang="ru">Дополнительные Опции Поля</span>
+              <span lang="en">Additional Field Options</span>
+            </h3>
+            <ul>
+              <li>
+                <strong lang="ru">Скрытие имени поля в карточке (Hide Name In Card):</strong><strong lang="en">Hide Name In Card:</strong>
+                <span lang="ru"> Флаг <code>Hide name in card</code> убирает лейбл с именем поля из отображения в карточке элемента. Полезно для полей-изображений или разделителей, где заголовок только мешает.</span>
+                <span lang="en"> The <code>Hide name in card</code> flag removes the field label from the item card display. Useful for image fields or decorative separators where the label title only adds visual clutter.</span>
+              </li>
+              <li>
+                <strong lang="ru">Описание Поля (Field Description):</strong><strong lang="en">Field Description:</strong>
+                <span lang="ru"> Текстовое поле <code>Description</code> в настройках поля предназначено для комментариев и аннотаций. При экспорте в формате Lua текст описания будет добавлен как <code>---@field</code> LSP-комментарий непосредственно над объявлением поля — это позволяет получить автодополнение и документацию прямо в редакторе кода.</span>
+                <span lang="en"> The <code>Description</code> text input in field settings is for inline documentation. When exporting to Lua format, the description is injected as a <code>---@field</code> LSP annotation comment above the field declaration — providing code completion and hover docs directly in the code editor.</span>
+              </li>
+              <li>
+                <strong lang="ru">Перетаскивание полей для изменения порядка:</strong><strong lang="en">Drag-to-Reorder Fields:</strong>
+                <span lang="ru"> В списке полей категории каждое поле имеет иконку-ручку (<code>⠿</code>) в левой части строки. Зажмите её мышью и перетащите поле на новую позицию. Синяя линия-индикатор покажет место вставки. Порядок полей определяет как порядок столбцов в режиме таблицы, так и порядок полей по умолчанию в карточке элемента.</span>
+                <span lang="en"> In the category field list, each field has a grip handle icon (<code>⠿</code>) on the left. Click-drag it to reorder the field. A blue insertion line indicator shows the drop target. Field order defines both the column order in table mode and the default field order in item cards.</span>
+              </li>
+            </ul>
+
+          </div>
+          <!-- DOC SECTION: Value Locks System -->
+          <div id="doc-locks" class="doc-section">
             <h2>
-              <span lang="ru">Настройка Внешнего Вида (Layouts)</span>
-              <span lang="en">Visual Forms & Layouts</span>
+              <span lang="ru">Система Замков и Наследование Значений</span>
+              <span lang="en">Value Locks System & Inheritance</span>
             </h2>
-            <p lang="ru">Когда у категории много полей (например, 20-30 характеристик для сложного монстра), редактировать их обычным списком становится неудобно. DataForge предоставляет визуальный инструмент настройки формы — <strong>Layout Tree Editor</strong>.</p>
-            <p lang="en">When a category has many fields (e.g., 20-30 attributes for a complex boss monster), editing them in a simple flat list becomes cumbersome. DataForge provides an interactive tool to design custom editing forms — the <strong>Layout Tree Editor</strong>.</p>
-            
-            <p lang="ru">Вкладка <strong>Layout</strong> позволяет визуально сконструировать форму заполнения данных с помощью древовидной структуры узлов:</p>
-            <p lang="en">The <strong>Layout</strong> tab allows visually building a data input form template using a hierarchical tree structure of layout nodes:</p>
+            <p lang="ru">Одной из самых мощных фич DataForge является система интерактивных <strong>Замков (Padlock System)</strong>. Она решает проблему быстрого обновления баланса во всей базе данных.</p>
+            <p lang="en">One of the hallmark capabilities of DataForge is the interactive **Padlock System**. It resolves the problem of applying rapid balance adjustments across a massive database.</p>
+
+            <div class="carousel">
+              <figure class="doc-image">
+              <img src="images/lock_system_unlocked.png" alt="Value is inherited from schema defaults (Padlock is open)">
+              <figcaption>
+                <span lang="ru">Значение унаследовано (Замок открыт)</span>
+                <span lang="en">Value is inherited from schema defaults (Padlock is open)</span>
+              </figcaption>
+            </figure>
+              <!-- slide -->
+              <figure class="doc-image">
+              <img src="images/lock_system_locked.png" alt="Value overridden locally (Padlock is shut)">
+              <figcaption>
+                <span lang="ru">Значение переопределено (Замок закрыт)</span>
+                <span lang="en">Value overridden locally (Padlock is shut)</span>
+              </figcaption>
+            </figure>
+            </div>
 
             <h3>
-              <span lang="ru">Доступные элементы разметки:</span>
+              <span lang="ru">Значения по умолчанию (Default Values)</span>
+              <span lang="en">Schema Defaults (Default Values)</span>
+            </h3>
+            <p lang="ru">На уровне настройки категории во вкладке <strong>Default Values</strong> вы можете задать значения по умолчанию для каждого поля. Например, для оружия установить базовую прочность в <code>100</code> единиц, а шанс крита в <code>0.05</code>.</p>
+            <p lang="en">In the category structure settings under the <strong>Default Values</strong> tab, you can set default variables for every field. E.g., setting default weapon durability to <code>100</code> and crit chance to <code>0.05</code>.</p>
+
+            <h3>
+              <span lang="ru">Состояние замков и наследование</span>
+              <span lang="en">Padlock States & Propagation</span>
+            </h3>
+            <p lang="ru">В карточке редактирования элемента справа от каждого поля отображается маленькая иконка замка:</p>
+            <p lang="en">In the item editor card, a padlock status icon is displayed at the right edge of each input field:</p>
+            <ul>
+              <li>
+                <strong lang="ru">Открытый замок (Unlocked / Наследуется):</strong><strong lang="en">Unlocked (Inherited):</strong>
+                <span lang="ru"> По умолчанию при создании нового элемента все его поля имеют открытый замок. Это означает, что поле **динамически наследует** дефолтное значение из категории. Если вы измените дефолт в структуре категории (например, поменяете прочность со 100 на 120), то значение моментально обновится во всех элементах категории, у которых замок открыт.</span>
+                <span lang="en"> By default, all fields in a newly created item start in an unlocked state. This indicates the field **dynamically inherits** the default schema value. If you edit category defaults (e.g., changing durability from 100 to 120), all items with an unlocked padlock instantly sync to the new value.</span>
+              </li>
+              <li>
+                <strong lang="ru">Закрытый замок (Locked / Переопределено):</strong><strong lang="en">Locked (Overridden):</strong>
+                <span lang="ru"> Как только вы вручную редактируете значение поля в элементе, замок **автоматически закрывается**. Это изолирует значение элемента. Любые глобальные изменения дефолтных настроек на уровне категории больше не коснутся этого поля в данном элементе.</span>
+                <span lang="en"> As soon as you manually type a new value into an item field, the padlock **automatically clicks shut**. This isolates the local parameter, preventing future category-level schema default updates from overwriting your custom edit.</span>
+              </li>
+              <li>
+                <strong lang="ru">Сброс переопределения (Reset):</strong><strong lang="en">Resetting Overrides:</strong>
+                <span lang="ru"> Вы можете в любой момент сбросить переопределенное значение обратно к дефолтному. Для этого просто **кликните по закрытому замку**. Он откроется, затрет локальные правки и вернет значение по умолчанию из категории, возобновив динамическую связь.</span>
+                <span lang="en"> You can revert any local changes back to base values. Simply **click the closed padlock icon**. It snaps open, discards the override, restores the category default value, and resumes dynamic inheritance.</span>
+              </li>
+            </ul>
+          </div>
+          <!-- DOC SECTION: Layouts -->
+          <div id="doc-layouts" class="doc-section">
+            <h2>
+              <span lang="ru">Конструирование Форм и Макеты</span>
+              <span lang="en">Input Form Layouts</span>
+            </h2>
+            <p lang="ru">Когда у категории много полей (например, 20-30 характеристик для сложного монстра), редактировать их одним длинным списком крайне неудобно. DataForge предлагает мощное решение — интерактивный конструктор форм <strong>Layout Tree Editor</strong> (вкладка <strong>Layout</strong> в настройках категории).</p>
+            <p lang="en">When a category has dozens of properties (e.g., 20-30 attributes for a complex raid boss), editing them in a single flat list becomes highly inefficient. DataForge resolves this via a built-in visual form designer — the <strong>Layout Tree Editor</strong> (available under the <strong>Layout</strong> tab of category settings).</p>
+
+            <figure class="doc-image">
+              <img src="images/layout_tree_editor.png" alt="Visual Layout Tree Editor Interface">
+              <figcaption>
+                <span lang="ru">Интерфейс конструктора макетов форм</span>
+                <span lang="en">Visual Layout Tree Editor Interface</span>
+              </figcaption>
+            </figure>
+
+            <p lang="ru">Вы конструируете интерфейс ввода данных с помощью иерархического дерева элементов разметки. Все изменения макета мгновенно отображаются в карточках элементов.</p>
+            <p lang="en">You build the data entry form interface by composing a hierarchical tree of layout elements. The changes propagate immediately to the editing cards of all items.</p>
+
+            <h3>
+              <span lang="ru">Доступные элементы разметки (Layout Elements):</span>
               <span lang="en">Available Layout Elements:</span>
             </h3>
             <ul>
               <li>
                 <strong lang="ru">Контейнеры (Containers):</strong><strong lang="en">Containers:</strong>
-                <span lang="ru"> Группируют несколько полей. Вы можете выбрать направление группировки: <em>Horizontal</em> (поля выстроятся в ряд) или <em>Vertical</em> (друг под другом).</span>
-                <span lang="en"> Group multiple fields. You can select the flow direction: <em>Horizontal</em> (fields are placed side-by-side) or <em>Vertical</em> (fields stack on top of each other).</span>
+                <span lang="ru"> Структурные блоки, объединяющие несколько полей. Вы можете выбрать тип контейнера: <em>Horizontal</em> (поля расположатся в ряд в виде колонок) или <em>Vertical</em> (поля выстроятся друг под другом). Контейнеры можно вкладывать друг в друга для создания сложных сеток.</span>
+                <span lang="en"> Structural nodes grouping multiple fields together. You can toggle container flow: <em>Horizontal</em> (fields align side-by-side as columns) or <em>Vertical</em> (fields stack on top of each other). Containers can be nested to create grid layouts.</span>
               </li>
               <li>
                 <strong lang="ru">Заголовки (Headers):</strong><strong lang="en">Headers:</strong>
-                <span lang="ru"> Добавляют текстовые разделители для визуального разделения блоков формы (например: "Базовые параметры", "Боевые характеристики").</span>
-                <span lang="en"> Add text labels to visually group form sections (e.g., "Core Settings", "Combat Attributes").</span>
+                <span lang="ru"> Текстовые разделители для обозначения логических блоков формы (например: «Базовые характеристики», «Настройки ИИ»).</span>
+                <span lang="en"> Text labels that introduce logical sections of the form (e.g., "Combat Attributes", "AI Coefficients").</span>
               </li>
               <li>
                 <strong lang="ru">Разделители (Separators):</strong><strong lang="en">Separators:</strong>
-                <span lang="ru"> Простые линии-разделители для отделения одной группы параметров от другой.</span>
-                <span lang="en"> Simple horizontal rule dividers to separate one parameter group from another.</span>
+                <span lang="ru"> Простые горизонтальные линии для визуального отделения одной группы параметров от другой.</span>
+                <span lang="en"> Simple horizontal rule lines to separate distinct input blocks.</span>
               </li>
             </ul>
 
+            <figure class="doc-image">
+              <img src="images/layout_form_preview.png" alt="Generated custom item editing form">
+              <figcaption>
+                <span lang="ru">Сгенерированная форма редактирования по макету</span>
+                <span lang="en">Generated custom item editing form</span>
+              </figcaption>
+            </figure>
+
             <h3>
-              <span lang="ru">Управление и опции отображения полей:</span>
-              <span lang="en">Field Presentation Properties:</span>
+              <span lang="ru">Дополнительные опции полей в макете</span>
+              <span lang="en">Advanced Field Presentation Options</span>
             </h3>
-            <p lang="ru">Вы можете перетаскивать созданные поля в контейнеры, настраивать их последовательность, а также задавать уникальные свойства для отображения полей в макете:</p>
-            <p lang="en">You can drag-and-drop fields into containers, organize their tab order, and configure custom layout properties for specific fields:</p>
+            <p lang="ru">Каждое поле, помещенное в дерево макета, имеет индивидуальные флаги отображения:</p>
+            <p lang="en">Each field placed in the layout tree has separate presentation controls:</p>
             <ul>
               <li>
-                <strong lang="ru">Растянуть (Expand):</strong><strong lang="en">Expand:</strong>
-                <span lang="ru"> Флаг заставляет поле занимать всё доступное горизонтальное пространство в ряду (полезно для адаптивного распределения ширины полей в горизонтальных контейнерах).</span>
-                <span lang="en"> Forces the field to stretch and fill all available horizontal space in a row (useful for auto-scaling column widths inside horizontal containers).</span>
+                <strong lang="ru">Expand (Растянуть):</strong><strong lang="en">Expand:</strong>
+                <span lang="ru"> Заставляет поле занять всю доступную ширину. Особенно полезно для полей типа `Collection` или длинных текстовых строк, находящихся внутри горизонтальных контейнеров.</span>
+                <span lang="en"> Forces the field to stretch and fill all available horizontal space. Especially useful for arrays or long string textareas within horizontal rows.</span>
               </li>
               <li>
-                <strong lang="ru">Встроить связь (Embed Reference):</strong><strong lang="en">Embed Reference:</strong>
-                <span lang="ru"> Доступно только для полей типа <code>Reference</code>. При активации этого флага вместо выпадающего списка выбора ID, прямо внутрь карточки текущего элемента будут **встроены поля редактирования связанного объекта**. Это позволяет редактировать связанные сущности «in-place» без перехода в другие категории.</span>
-                <span lang="en"> Only available for <code>Reference</code> type fields. Activating this option hides the standard dropdown ID selector and instead **embeds the edit form fields of the linked entity** directly into the parent card. This allows game designers to edit nested objects inline without context-switching.</span>
+                <strong lang="ru">Embed Reference (Встроить связь):</strong><strong lang="en">Embed Reference:</strong>
+                <span lang="ru"> Уникальная опция для полей типа <code>Reference</code>. При её включении вместо обычного выпадающего списка выбора ID элемента **прямо внутрь формы встраиваются поля редактирования связанного элемента**. Это позволяет геймдизайнеру настраивать вложенные сущности "in-place" без необходимости переходить в другие вкладки или категории.</span>
+                <span lang="en"> A unique feature for <code>Reference</code> fields. Enabling this checkbox hides the standard ID dropdown selector and instead **embeds the edit fields of the referenced item directly into the parent card**. This enables editing nested relational trees in-place without context switching.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- DOC SECTION: Managing Items -->
+          <div id="doc-items" class="doc-section">
+            <h2>
+              <span lang="ru">Управление Элементами</span>
+              <span lang="en">Managing Items</span>
+            </h2>
+            <p lang="ru">После настройки структуры категорий и полей вы приступаете к созданию контента — наполнению базы данных <strong>Элементами (Items)</strong>.</p>
+            <p lang="en">Once you have established categories, fields, and layouts, you can start building content by populating the database with **Items**.</p>
+
+            <figure class="doc-image">
+              <img src="images/item_editing_form.png" alt="Item record editing viewport">
+              <figcaption>
+                <span lang="ru">Форма редактирования элемента</span>
+                <span lang="en">Item record editing viewport</span>
+              </figcaption>
+            </figure>
+
+            <h3>
+              <span lang="ru">Создание Элемента</span>
+              <span lang="en">Creating an Item</span>
+            </h3>
+            <p lang="ru">Выберите категорию в левой панели, а затем нажмите круглую кнопку <strong><code>+</code></strong> в верхней части списка элементов. Введите уникальный ID элемента (технический ключ, например, <code>iron_ore_01</code>). Справа откроется форма редактирования, сгенерированная по правилам макета Layout.</p>
+            <p lang="en">Select a category in the sidebar explorer tree, and click the circular <strong><code>+</code></strong> button under the items header list. Specify a unique item ID (e.g., <code>iron_ore_01</code>). The right editor viewport will load the custom layout form.</p>
+
+            <h3>
+              <span lang="ru">Редактирование ID элемента (Двойной клик)</span>
+              <span lang="en">Renaming Item ID (Double-Click Action)</span>
+            </h3>
+            <p lang="ru">Если вам необходимо переименовать идентификатор (ID) уже созданного элемента, нет необходимости удалять его и создавать заново. Совершите <strong>двойной клик левой кнопкой мыши по названию элемента (ID)</strong> в самом верху правой панели редактирования. Заголовок превратится в поле ввода.</p>
+            <p lang="en">If you need to rename the unique identifier (ID) of an existing item, you don't have to delete and recreate the record. Simply <strong>double-click the item title ID</strong> at the top of the right editor viewport. The header turns into a text box.</p>
+
+            <figure class="doc-image">
+              <img src="images/item_inline_rename.png" alt="Item ID inline renaming (Double-click activation)">
+              <figcaption>
+                <span lang="ru">Быстрое переименование ID элемента (Двойной клик)</span>
+                <span lang="en">Item ID inline renaming (Double-click activation)</span>
+              </figcaption>
+            </figure>
+
+            <p lang="ru">Введите новый ID и нажмите <strong>Enter</strong> (или кликните в любое место вне поля ввода) для сохранения. Нажмите <strong>Escape</strong>, чтобы отменить переименование. DataForge автоматически проверит уникальность нового ID во всей категории и выведет предупреждение, если ID занят.</p>
+            <p lang="en">Type the new key and press <strong>Enter</strong> (or click outside/blur focus) to save. Press <strong>Escape</strong> to cancel. DataForge automatically validates that the new ID is unique inside the category, throwing an error if a conflict arises.</p>
+
+            <h3>
+              <span lang="ru">Валидация при вводе и уведомления об ошибках</span>
+              <span lang="en">Validation Warnings & Conflict Alerts</span>
+            </h3>
+            <p lang="ru">DataForge производит проверку вводимых данных на лету в соответствии с правилами схемы категории:</p>
+            <p lang="en">DataForge runs background syntax checks on the fly as you edit values inside the form fields:</p>
+            <ul>
+              <li>
+                <span lang="ru">Если поле помечено как <strong>Required</strong> и оставлено пустым, граница поля подсветится красным цветом с надписью «Required field».</span>
+                <span lang="en">If a field is marked as <strong>Required</strong> and left blank, it glows red with a "Required field" label.</span>
+              </li>
+              <li>
+                <span lang="ru">Если поле числовое, а введенное значение выходит за рамки <strong>Min/Max</strong>, редактор автоматически скорректирует число или выведет предупреждение.</span>
+                <span lang="en">If a numeric cell value violates <strong>Min/Max</strong> boundaries, the editor warns you or clamps the number.</span>
+              </li>
+              <li>
+                <span lang="ru">Если строка не проходит валидацию по <strong>Regex</strong>, инпут окрасится в красный цвет с описанием ошибки шаблона.</span>
+                <span lang="en">If a string fails a <strong>Regex</strong> check, the input field highlights in red, notifying you of the pattern mismatch.</span>
               </li>
             </ul>
           </div>
@@ -798,8 +1322,16 @@
               <span lang="ru">Импорт и Экспорт Данных</span>
               <span lang="en">Import & Export</span>
             </h2>
-            <p lang="ru">DataForge поддерживает двусторонний обмен данными, позволяя легко переносить информацию между редактором, внешними таблицами и файлами конфигурации вашей игры.</p>
+            <p lang="ru">DataForge поддерживает двухсторонний обмен данными, позволяя легко переносить информацию между редактором, внешними таблицами и файлами конфигурации вашей игры.</p>
             <p lang="en">DataForge supports two-way data exchange, making it easy to transfer information between the editor, external spreadsheets, and your game configuration files.</p>
+
+            <figure class="doc-image">
+              <img src="images/export_options_menu.png" alt="Export Options Configuration Modal">
+              <figcaption>
+                <span lang="ru">Окно выбора параметров экспорта</span>
+                <span lang="en">Export Options Configuration Modal</span>
+              </figcaption>
+            </figure>
 
             <h3>
               <span lang="ru">Экспорт Данных</span>
@@ -825,6 +1357,14 @@
               </li>
             </ol>
 
+            <figure class="doc-image">
+              <img src="images/import_settings_modal.png" alt="Import Configuration Dialog Box">
+              <figcaption>
+                <span lang="ru">Окно настроек импорта данных</span>
+                <span lang="en">Import Configuration Dialog Box</span>
+              </figcaption>
+            </figure>
+
             <h3>
               <span lang="ru">Импорт Данных</span>
               <span lang="en">Importing Data</span>
@@ -844,7 +1384,7 @@
                 <ul>
                   <li><em lang="ru">JSON (.json)</em><em lang="en">JSON (.json)</em> — <span lang="ru">массивы объектов или ассоциативные словари.</span><span lang="en">object arrays or key-value dictionaries.</span></li>
                   <li><em lang="ru">CSV (.csv)</em><em lang="en">CSV (.csv)</em> — <span lang="ru">плоские таблицы с заголовками.</span><span lang="en">flat tables with header columns.</span></li>
-                  <li><em lang="ru">Lua (.lua)</em><em lang="en">Lua (.lua)</em> — <span lang="ru">файлы, возвращающие Lua-таблицы (возвращаемое значение парсится через AST-анализатор).</span><span lang="en">files returning a Lua table (parsed using AST syntax parser).</span></li>
+                  <li><em lang="ru">Lua (.lua)</em><em lang="en">Lua (.lua)</em> — <span lang="ru">файлы, возвращающие Lua-таблицы.</span><span lang="en">files returning a Lua table.</span></li>
                 </ul>
               </li>
               <li>
@@ -864,8 +1404,8 @@
                 </ul>
               </li>
               <li>
-                <strong lang="ru">Окно настроек импорта (Import Settings):</strong><strong lang="en">Import Settings Modal Window:</strong>
-                <span lang="ru"> Перед финальной загрузкой открывается модальное окно настроек:</span>
+                <strong lang="ru">Настройки парсинга (Import Dialog Settings):</strong><strong lang="en">Import Dialog Parser Configuration:</strong>
+                <span lang="ru"> Перед финальным импортом открывается модальное окно настроек:</span>
                 <span lang="en"> Before finalizing the import, a configuration window opens:</span>
                 <ul>
                   <li><em lang="ru">Разделитель (для CSV):</em><em lang="en">Delimiter (for CSV):</em> <span lang="ru">Возможность указать символ разделения колонок (запятая, точка с запятой и т.д.).</span><span lang="en">Custom columns separator (comma, semicolon, etc.).</span></li>
@@ -880,138 +1420,241 @@
           <div id="doc-plugins-dev" class="doc-section">
             <h2>
               <span lang="ru">Разработка Плагинов (API)</span>
-              <span lang="en">Plugin Development (API)</span>
+              <span lang="en">Plugin Development Guide</span>
             </h2>
-            <p lang="ru">DataForge поддерживает динамическую загрузку плагинов, написанных на JavaScript. Вы можете расширять функционал редактора, регистрируя новые типы полей, добавляя собственные настройки и взаимодействуя со встроенным Tauri API.</p>
-            <p lang="en">DataForge supports dynamic loading of custom JavaScript plugins. You can extend the editor by registering custom field types, defining plugin settings, and interacting with the native Tauri bridge.</p>
-            
-            <p lang="ru">Каждый плагин представляет собой один <code>.js</code> файл, который помещается в локальную папку плагинов приложения. Настройки и метаданные плагина парсятся из JSDoc-комментария в начале файла.</p>
-            <p lang="en">Each plugin is a single <code>.js</code> file placed inside the local plugins folder of the application. The plugin configuration and meta definitions are parsed dynamically from a JSDoc block at the beginning of the file.</p>
+            <p lang="ru">DataForge поддерживает динамическое расширение функционала с помощью плагинов, написанных на JavaScript. Под капотом приложение загружает код плагина и выполняет его в изолированном контексте: <code>new Function("DataForge", "React", code)</code>, передавая туда мост к API программы и библиотеку React.</p>
+            <p lang="en">DataForge supports runtime extensibility through custom JavaScript plugins. Under the hood, the application compiles and evaluates the plugin code within a sandbox: <code>new Function("DataForge", "React", code)</code>, passing the native API namespace and React.</p>
+
+            <div class="note-box">
+              <strong lang="ru">💡 Где хранятся плагины:</strong>
+              <strong lang="en">💡 Where Plugins Live:</strong>
+              <span lang="ru">Файлы плагинов с расширением <code>.js</code> должны быть помещены в папку <code>plugins/</code> в корневой директории вашего проекта. Редактор автоматически сканирует эту папку при запуске или при нажатии кнопки перезагрузки плагинов.</span>
+              <span lang="en">Plugin files ending with <code>.js</code> must be placed inside the <code>plugins/</code> directory in your project root. The editor automatically scans this folder during initialization or when you trigger a plugins reload.</span>
+            </div>
 
             <h3>
-              <span lang="ru">Метаданные плагина</span>
-              <span lang="en">Plugin Meta Properties</span>
+              <span lang="ru">Описание метаданных JSDoc</span>
+              <span lang="en">JSDoc Metadata Configuration Header</span>
             </h3>
-            <p lang="ru">Каждый плагин представляет собой один <code>.js</code> файл. В начале файла должен присутствовать JSDoc-комментарий, содержащий следующие параметры: имя плагина (<code>@name</code>), краткое описание (<code>@description</code>), версию (<code>@version</code>), автора (<code>@author</code>) и перечень регистрируемых типов полей (<code>@fields</code>).</p>
-            <p lang="en">The JSDoc comment at the top of the plugin file must declare: the plugin name (<code>@name</code>), description (<code>@description</code>), version (<code>@version</code>), author (<code>@author</code>), and registered field type tags (<code>@fields</code>).</p>
+            <p lang="ru">Каждый файл плагина должен начинаться со специального JSDoc-комментария. Редактор считывает его заголовки для отображения в менеджере плагинов и регистрации типов полей:</p>
+            <p lang="en">Each plugin file must begin with a structured JSDoc comment. The editor parses these headers to register metadata and field configurations:</p>
+            <pre><code class="language-javascript">/**
+ * @name Defold Atlas Parser
+ * @description Parses .atlas files to choose sprites
+ * @version 1.0.0
+ * @author GameDev Team
+ * @fields defold_sprite
+ */</code></pre>
+            <ul>
+              <li><strong lang="ru">@name:</strong><strong lang="en">@name:</strong> <span lang="ru">Уникальное имя плагина.</span><span lang="en">Human-readable name of the plugin.</span></li>
+              <li><strong lang="ru">@description:</strong><strong lang="en">@description:</strong> <span lang="ru">Краткое описание назначения плагина.</span><span lang="en">Brief summary of what the plugin does.</span></li>
+              <li><strong lang="ru">@version:</strong><strong lang="en">@version:</strong> <span lang="ru">Текущая версия плагина.</span><span lang="en">Current semantic version of the plugin.</span></li>
+              <li><strong lang="ru">@author:</strong><strong lang="en">@author:</strong> <span lang="ru">Автор или команда разработки.</span><span lang="en">Name of the author/team.</span></li>
+              <li><strong lang="ru">@fields:</strong><strong lang="en">@fields:</strong> <span lang="ru">Список регистрируемых типов полей через запятую (например, <code>defold_sprite, range_slider</code>).</span><span lang="en">Comma-separated tags of custom fields this plugin registers (e.g. <code>defold_sprite, range_slider</code>).</span></li>
+            </ul>
 
             <h3>
-              <span lang="ru">Интерфейс API</span>
-              <span lang="en">API Interface</span>
+              <span lang="ru">Методы API DataForge</span>
+              <span lang="en">DataForge API Bridge Methods</span>
             </h3>
-            <p lang="ru">При загрузке плагину передаются два глобальных объекта: <code>DataForge</code> (интерфейс API редактора) и <code>React</code>. Доступны следующие методы:</p>
-            <p lang="en">When loaded, the plugin is initialized with two global objects: <code>DataForge</code> (editor API registry) and <code>React</code>. The following methods are available:</p>
+            <p lang="ru">Плагину передается глобальный объект <code>DataForge</code>, предоставляющий следующие методы:</p>
+            <p lang="en">Plugins are invoked with a global <code>DataForge</code> bridge namespace containing these functions:</p>
 
             <h4>
-              <span lang="ru">1. Регистрация нового типа поля</span>
+              <span lang="ru">1. Регистрация кастомного типа поля</span>
               <span lang="en">1. Register a Custom Field Type</span>
             </h4>
-            <pre><code>DataForge.registerFieldType(pluginId, fieldTypeConfig);</code></pre>
-            <p lang="ru">Параметры объекта <code>fieldTypeConfig</code>:</p>
-            <p lang="en">Properties of the <code>fieldTypeConfig</code> registry object:</p>
-            <div class="table-responsive">
-              <table>
-                <thead>
-                  <tr>
-                    <th><span lang="ru">Параметр</span><span lang="en">Property</span></th>
-                    <th><span lang="ru">Тип</span><span lang="en">Type</span></th>
-                    <th><span lang="ru">Описание</span><span lang="en">Description</span></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>id</code></td>
-                    <td><code>String</code></td>
-                    <td><span lang="ru">Уникальный ID типа поля (например, <code>"range_slider"</code>).</span><span lang="en">Unique ID of the field type (e.g., <code>"range_slider"</code>).</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>name</code></td>
-                    <td><code>String</code></td>
-                    <td><span lang="ru">Отображаемое имя типа поля в конструкторе макетов.</span><span lang="en">Display name of the field type in layout editor dropdowns.</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>icon</code></td>
-                    <td><code>String</code></td>
-                    <td><span lang="ru">Название иконки из библиотеки Lucide (например, "Sliders", "Calendar").</span><span lang="en">Lucide library icon name (e.g., "Sliders", "Calendar").</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>renderConfig</code></td>
-                    <td><code>Function</code></td>
-                    <td><span lang="ru">Компонент React для рендеринга настроек поля в окне редактирования структуры категории. Принимает аргументы <code>{ config, onChange }</code>.</span><span lang="en">React component rendering the field structure settings. Accepts arguments: <code>{ config, onChange }</code>.</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>renderCell</code></td>
-                    <td><code>Function</code></td>
-                    <td><span lang="ru">Компонент React для рендеринга инпута в форме заполнения элемента. Принимает аргументы <code>{ value, onChange, field, rowId, projectSettings }</code>.</span><span lang="en">React component rendering the input cell in the item edit card. Accepts arguments: <code>{ value, onChange, field, rowId, projectSettings }</code>.</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>renderPreview</code></td>
-                    <td><code>Function</code></td>
-                    <td><span lang="ru">Компонент React для рендеринга предпросмотра значения поля в списках. Принимает аргументы <code>{ value, field, projectSettings }</code>.</span><span lang="en">React component rendering a preview of the field value inside entity list trees. Accepts arguments: <code>{ value, field, projectSettings }</code>.</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <pre><code class="language-javascript">DataForge.registerFieldType(pluginId, {
+  id: "defold_sprite",
+  name: "Defold Sprite Selector",
+  icon: "Image",
+  renderConfig: ({ config, onChange }) => { ... },
+  renderCell: ({ value, onChange, field, rowId, projectSettings }) => { ... }
+});</code></pre>
 
             <h4>
-              <span lang="ru">2. Регистрация настроек плагина</span>
-              <span lang="en">2. Register Plugin Settings</span>
+              <span lang="ru">2. Добавление настроек в проект</span>
+              <span lang="en">2. Register Custom Plugin Settings</span>
             </h4>
-            <pre><code>DataForge.registerSetting(pluginId, settingConfig);</code></pre>
-            <p lang="ru">Позволяет добавить параметры настройки плагина в глобальное меню настроек приложения. Параметры <code>settingConfig</code>:</p>
-            <p lang="en">Allows adding custom configuration variables to the global application settings menu. Properties of <code>settingConfig</code>:</p>
-            <div class="table-responsive">
-              <table>
-                <thead>
-                  <tr>
-                    <th><span lang="ru">Параметр</span><span lang="en">Property</span></th>
-                    <th><span lang="ru">Тип</span><span lang="en">Type</span></th>
-                    <th><span lang="ru">Описание</span><span lang="en">Description</span></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>id</code></td>
-                    <td><code>String</code></td>
-                    <td><span lang="ru">Уникальный ID настройки.</span><span lang="en">Unique ID of the setting.</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>name</code></td>
-                    <td><code>String</code></td>
-                    <td><span lang="ru">Название настройки в интерфейсе.</span><span lang="en">Display label of the setting in the UI.</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>description</code></td>
-                    <td><code>String</code></td>
-                    <td><span lang="ru">Подсказка или подробное описание настройки.</span><span lang="en">Tooltip description of the setting.</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>type</code></td>
-                    <td><code>String</code></td>
-                    <td><span lang="ru">Тип инпута: <code>"string"</code>, <code>"boolean"</code>, <code>"number"</code>, <code>"directory"</code>.</span><span lang="en">Input field type: <code>"string"</code>, <code>"boolean"</code>, <code>"number"</code>, <code>"directory"</code>.</span></td>
-                  </tr>
-                  <tr>
-                    <td><code>default</code></td>
-                    <td><code>any</code></td>
-                    <td><span lang="ru">Значение по умолчанию.</span><span lang="en">Default value.</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <p lang="ru">Вы можете добавить переменные, настраиваемые пользователем в общих настройках проекта:</p>
+            <p lang="en">You can register parameters that users customize via the project settings pane:</p>
+            <pre><code class="language-javascript">DataForge.registerSetting("defold_atlas_parser", {
+  id: "atlas_path",
+  name: "Defold Atlas Directory",
+  description: "Directory containing .atlas files",
+  type: "directory",
+  default: ""
+});</code></pre>
 
             <h4>
-              <span lang="ru">3. Интеграция с ОС через Tauri Bridge</span>
-              <span lang="en">3. OS Integration via Tauri Bridge</span>
+              <span lang="ru">3. Системные функции (DataForge.Tauri)</span>
+              <span lang="en">3. Native OS Functions (DataForge.Tauri)</span>
             </h4>
-            <p lang="ru">Объект <code>DataForge.Tauri</code> предоставляет методы для безопасной работы с файловой системой пользователя:</p>
-            <p lang="en">The <code>DataForge.Tauri</code> bridge namespace exposes secure APIs to interface with the user's local operating system filesystem:</p>
+            <p lang="ru">Для обхода ограничений безопасности браузера плагины используют Tauri-мост для чтения файлов и открытия проводника:</p>
+            <p lang="en">To bypass standard sandbox constraints, plugins call native Tauri file system methods:</p>
             <ul>
-              <li><code>Tauri.open(options)</code> — <span lang="ru">вызов диалогового окна выбора файла/директории.</span><span lang="en">invokes native file/directory chooser dialogs.</span></li>
-              <li><code>Tauri.readTextFile(path)</code> — <span lang="ru">чтение содержимого текстового файла с диска.</span><span lang="en">reads the plain text contents of a file on disk.</span></li>
-              <li><code>Tauri.convertFileSrc(path)</code> — <span lang="ru">конвертация абсолютного пути к локальному файлу в безопасную ссылку (URL) для отображения в браузере (например, для предпросмотра картинок).</span><span lang="en">converts absolute local filepaths into secure web links (URLs) for browser rendering (e.g. for image thumbnail previews).</span></li>
+              <li><code>DataForge.Tauri.readTextFile(path)</code>: <span lang="ru">Считывает текстовое содержимое локального файла. Возвращает Promise со строкой.</span><span lang="en">Reads text contents of a file on disk. Returns a Promise resolving to a string.</span></li>
+              <li><code>DataForge.Tauri.open(options)</code>: <span lang="ru">Открывает диалоговое окно ОС для выбора файла или папки.</span><span lang="en">Opens native OS dialogue to select a file/directory.</span></li>
+              <li><code>DataForge.Tauri.convertFileSrc(path)</code>: <span lang="ru">Превращает локальный путь в URL-адрес для отображения изображений в теге <code>&lt;img src="..." /&gt;</code>.</span><span lang="en">Converts a local absolute filepath into a secure URL to render inside an <code>&lt;img src="..." /&gt;</code> element.</span></li>
             </ul>
+
+            <h3>
+              <span lang="ru">Пример: Плагин парсинга Атласов Defold</span>
+              <span lang="en">Real-World Walkthrough: Defold Atlas Parser Plugin</span>
+            </h3>
+            <p lang="ru">Ниже представлен реальный рабочий код плагина, который ищет файлы атласов (<code>.atlas</code>) в игровой папке, парсит список спрайтов и выводит выпадающий список для быстрого выбора кадра анимации в ячейке:</p>
+            <p lang="en">Here is a functional plugin implementation that scans for Defold <code>.atlas</code> files in a game directory, parses animation frame labels, and renders a dropdown selector inside item editing cards:</p>
+
+            <pre><code class="language-javascript">/**
+ * @name Defold Atlas Sprite Selector
+ * @description Allows choosing a sprite image frame from local Defold .atlas assets.
+ * @version 1.0.2
+ * @author Defold community
+ * @fields defold_sprite
+ */
+(function(DataForge, React) {
+  const pluginId = "defold_atlas_sprite_selector";
+
+  // Register settings
+  DataForge.registerSetting(pluginId, {
+    id: "atlas_dir",
+    name: "Atlas Directory",
+    description: "Absolute path to your Defold graphics folder",
+    type: "directory",
+    default: ""
+  });
+
+  // Helper: parse sprites from Defold .atlas format
+  function parseAtlasSprites(content) {
+    const list = [];
+    const regex = /animations\s*\{[\s\S]*?id:\s*"([^"]+)"[\s\S]*?\}/g;
+    let match;
+    while ((match = regex.exec(content)) !== null) {
+      list.push(match[1]);
+    }
+    return list;
+  }
+
+  // Register custom field type
+  DataForge.registerFieldType(pluginId, {
+    id: "defold_sprite",
+    name: "Defold Sprite Frame",
+    icon: "Grid",
+    
+    renderConfig: ({ config, onChange }) => {
+      return React.createElement("div", null, 
+        React.createElement("label", null, "Target Atlas File Name (.atlas):"),
+        React.createElement("input", {
+          type: "text",
+          className: "settings-input",
+          value: config.atlas_name || "",
+          placeholder: "hero.atlas",
+          onChange: (e) => onChange({ ...config, atlas_name: e.target.value })
+        })
+      );
+    },
+
+    renderCell: ({ value, onChange, field, projectSettings }) => {
+      const [sprites, setSprites] = React.useState([]);
+      const atlasDir = projectSettings[pluginId + "_atlas_dir"];
+      const atlasName = field.config?.atlas_name;
+
+      React.useEffect(() => {
+        if (!atlasDir || !atlasName) return;
+        const fullPath = atlasDir + "/" + atlasName;
+        DataForge.Tauri.readTextFile(fullPath)
+          .then(content => {
+            setSprites(parseAtlasSprites(content));
+          })
+          .catch(err => console.error("Error loading atlas:", err));
+      }, [atlasDir, atlasName]);
+
+      return React.createElement("select", {
+        value: value || "",
+        className: "cell-select",
+        onChange: (e) => onChange(e.target.value)
+      }, 
+        React.createElement("option", { value: "" }, "-- Select Sprite --"),
+        sprites.map(s => React.createElement("option", { key: s, value: s }, s))
+      );
+    }
+  });
+})(DataForge, React);</code></pre>
           </div>
 
+          <!-- DOC SECTION: Keyboard Shortcuts -->
+          <div id="doc-hotkeys" class="doc-section">
+            <h2>
+              <span lang="ru">Горячие Клавиши</span>
+              <span lang="en">Keyboard Shortcuts Reference</span>
+            </h2>
+            <p lang="ru">Использование горячих клавиш позволяет опытным геймдизайнерам и разработчикам ускорить работу с балансом и базами данных в разы, не отвлекаясь на мышь.</p>
+            <p lang="en">Utilizing global keyboard shortcuts enables game designers to accelerate content data entry, keeping their hands on the keyboard and skipping mouse clicks.</p>
+
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th><span lang="ru">Сочетание Клавиш</span><span lang="en">Key Combination</span></th>
+                    <th><span lang="ru">Действие</span><span lang="en">Action / Command</span></th>
+                    <th><span lang="ru">Контекст</span><span lang="en">Context Scope</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>Cmd + S</code> / <code>Ctrl + S</code></td>
+                    <td><span lang="ru">Сохранить проект на диск</span><span lang="en">Save active workspace to disk</span></td>
+                    <td><span lang="ru">Глобальное</span><span lang="en">Global App State</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>Cmd + F</code> / <code>Ctrl + F</code></td>
+                    <td><span lang="ru">Фокус на поле поиска / Живой фильтр</span><span lang="en">Focus explorer search input field</span></td>
+                    <td><span lang="ru">Глобальное</span><span lang="en">Global App State</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>Cmd + N</code> / <code>Ctrl + N</code></td>
+                    <td><span lang="ru">Создать новый элемент в активной категории</span><span lang="en">Create a new item in active category</span></td>
+                    <td><span lang="ru">Списки элементов</span><span lang="en">Item Explorer</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>Cmd + Z</code> / <code>Ctrl + Z</code></td>
+                    <td><span lang="ru">Отменить последнее действие (Undo)</span><span lang="en">Revert previous change (Undo)</span></td>
+                    <td><span lang="ru">Редактирование</span><span lang="en">History Buffer</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>Cmd + Y</code> / <code>Ctrl + Y</code></td>
+                    <td><span lang="ru">Повторить отмененное действие (Redo)</span><span lang="en">Reapply change (Redo)</span></td>
+                    <td><span lang="ru">Редактирование</span><span lang="en">History Buffer</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>Cmd + E</code> / <code>Ctrl + E</code></td>
+                    <td><span lang="ru">Открыть настройки экспорта данных</span><span lang="en">Open data export configuration panel</span></td>
+                    <td><span lang="ru">Глобальное</span><span lang="en">Global App State</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>Cmd + I</code> / <code>Ctrl + I</code></td>
+                    <td><span lang="ru">Открыть настройки импорта данных</span><span lang="en">Open data import selection window</span></td>
+                    <td><span lang="ru">Глобальное</span><span lang="en">Global App State</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>ArrowUp</code> / <code>ArrowDown</code></td>
+                    <td><span lang="ru">Перемещение фокуса по дереву</span><span lang="en">Navigate highlight in sidebar tree view</span></td>
+                    <td><span lang="ru">Боковое меню (вне инпутов)</span><span lang="en">Sidebar (when not typing)</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>Enter</code></td>
+                    <td><span lang="ru">Выбрать элемент или сохранить переименование</span><span lang="en">Select element or apply inline renaming</span></td>
+                    <td><span lang="ru">Боковое меню / Поля переименования</span><span lang="en">Sidebar / Title edit box</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>Escape</code></td>
+                    <td><span lang="ru">Отменить inline-переименование категории или элемента</span><span lang="en">Discard inline rename modifications</span></td>
+                    <td><span lang="ru">Активное поле inline-редактирования</span><span lang="en">Editing title input cell</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </article>
       </div>
     </section>
